@@ -59,7 +59,18 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("sa marche ou pas");
+        if(other == tapette)
+        {
+            active = false;
+
+            Debug.Log("sa marche");
+
+            fly.useGravity = true;
+            fly.isKinematic = false;
+
+            GetComponent<Collider>().isTrigger = false;
+        }
+        
 
     }
 
