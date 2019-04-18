@@ -59,7 +59,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("sa marche");
+        Debug.Log("sa marche ou pas");
 
     }
 
