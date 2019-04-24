@@ -1,0 +1,26 @@
+diff a/Fly Hunter/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll.meta b/Fly Hunter/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll.meta	(rejected hunks)
+@@ -0,0 +1,24 @@
++fileFormatVersion: 2
++guid: 02d88905ea77cb74493cd26bf096eb24
++timeCreated: 1521152335
++licenseType: Free
++PluginImporter:
++  serializedVersion: 1
++  iconMap: {}
++  executionOrder: {}
++  isPreloaded: 0
++  platformData:
++    Any:
++      enabled: 1
++      settings: {}
++    Editor:
++      enabled: 0
++      settings:
++        DefaultValueInitialized: true
++    WindowsStoreApps:
++      enabled: 0
++      settings:
++        CPU: AnyCPU
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
