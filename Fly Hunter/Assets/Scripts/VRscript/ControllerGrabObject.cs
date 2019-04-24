@@ -10,6 +10,8 @@ public class ControllerGrabObject : MonoBehaviour {
     public SteamVR_Behaviour_Pose controllerPose;
     public SteamVR_Action_Boolean grabAction;
 
+    public SteamVR_Action_Boolean useAction;
+
     private GameObject collidingObject; // 1
     private GameObject objectInHand; // 2
 
@@ -23,6 +25,14 @@ public class ControllerGrabObject : MonoBehaviour {
             if (collidingObject)
             {
                 GrabObject();
+
+                if (useAction.GetLastStateDown(handType))
+                {
+                    if (collidingObject)
+                    {
+                        useObject();
+                    }
+                }
             }
         }
 
@@ -74,6 +84,13 @@ public class ControllerGrabObject : MonoBehaviour {
         collidingObject = null;
     }
 
+    private void useObject()
+    {
+
+        Destroy(objectInHand);
+        //faire qq chose
+
+    }
 
     private void GrabObject()
     {
