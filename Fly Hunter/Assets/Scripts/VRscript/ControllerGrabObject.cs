@@ -11,10 +11,21 @@ public class ControllerGrabObject : MonoBehaviour {
     public SteamVR_Action_Boolean grabAction;
 
     public SteamVR_Action_Boolean useAction;
+    private bool objectSelect = false;
 
     private GameObject collidingObject; // 1
     private GameObject objectInHand; // 2
 
+
+
+
+
+    public sabreLaser sabre;
+
+    private void Start()
+    {
+        sabre = GetComponent<sabreLaser>();
+    }
 
     // Update is called once per frame
     void Update () {
@@ -25,14 +36,8 @@ public class ControllerGrabObject : MonoBehaviour {
             if (collidingObject)
             {
                 GrabObject();
-
-                if (useAction.GetLastStateDown(handType))
-                {
-                    if (collidingObject)
-                    {
-                        useObject();
-                    }
-                }
+                objectSelect = true;
+               
             }
         }
 
@@ -42,9 +47,36 @@ public class ControllerGrabObject : MonoBehaviour {
             if (objectInHand)
             {
                 ReleaseObject();
+                objectSelect = false;
             }
         }
 
+        if (useAction.GetLastStateDown(handType))
+        {
+            if(objectSelect)
+            {
+                useObject();
+                sabre.degaine();
+            }
+
+
+            if (objectSelect || objectInHand.CompareTag("sabre"))
+            {
+                useObject();
+                sabre.degaine();
+            }
+
+
+        }
+
+        if(objectSelect)
+        {
+            objectInHand.transform.position = transform.position;
+            //objectInHand.transform.rotation = transform.rotation;
+            //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
+        }
+
+       
 
     }
 
@@ -87,7 +119,7 @@ public class ControllerGrabObject : MonoBehaviour {
     private void useObject()
     {
 
-        Destroy(objectInHand);
+        //Destroy(objectInHand);
         //faire qq chose
 
     }
@@ -100,6 +132,8 @@ public class ControllerGrabObject : MonoBehaviour {
         // 2
         var joint = AddFixedJoint();
         joint.connectedBody = objectInHand.GetComponent<Rigidbody>();
+
+        
     }
 
     // 3
