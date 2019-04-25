@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788c65e5dd27d5f40bca11f324288dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GM: {fileID: 0}
+  GM: {fileID: 1703620618}
 --- !u!102 &70762305
 TextMesh:
   serializedVersion: 3
@@ -205,12 +205,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 70762303}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.504, y: 1.215, z: 3.267}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5100403, y: 0.7110748, z: -0.3599545}
+  m_LocalScale: {x: 1, y: 1, z: 1.3823198}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 991956492}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &270179490
 GameObject:
@@ -597,7 +597,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -426.61, y: -180.32, z: 67.79}
   m_LocalScale: {x: 1, y: 1, z: 0.72342163}
-  m_Children: []
+  m_Children:
+  - {fileID: 70762307}
   m_Father: {fileID: 445403807}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
