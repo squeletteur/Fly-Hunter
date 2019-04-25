@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public int score = 500;
     public bool finVague;
+    public int timer = 60;
     int vague = 1;
 
     // Use this for initialization
