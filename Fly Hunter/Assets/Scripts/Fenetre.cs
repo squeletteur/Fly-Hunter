@@ -63,11 +63,8 @@ public class Fenetre : MonoBehaviour
 
     void AutoOpenFinVagues()
     {
-        if (GM.finVague == true)
-        {
             transform.position = posOpWndw;
             timer = 60;
             opened = true;
-        }
     }
 }

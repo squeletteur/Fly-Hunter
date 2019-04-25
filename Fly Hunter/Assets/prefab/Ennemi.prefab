@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23845805349480556}
   - component: {fileID: 135158333331574216}
   - component: {fileID: 114285458744230158}
+  - component: {fileID: 114341961749791866}
   m_Layer: 0
   m_Name: Ennemi
   m_TagString: Untagged
@@ -96,8 +97,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41a6111b5848d441b903e66cd34c3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tapette: {fileID: 0}
+  fly: {fileID: 0}
+  active: 1
   speed: 5
   target: {fileID: 0}
+--- !u!114 &114341961749791866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1870187916670284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717cafdf4eaff3a4d9557c7b11a56ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnCDWave1: 2
+  spawnCDWave2: 1
+  spawnCDWave3: 0
+  isInWave1: 1
+  isInWave2: 1
+  isInWave3: 0
 --- !u!135 &135158333331574216
 SphereCollider:
   m_ObjectHideFlags: 1

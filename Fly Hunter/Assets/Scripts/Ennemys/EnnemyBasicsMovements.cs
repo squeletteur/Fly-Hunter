@@ -5,43 +5,52 @@ using UnityEngine;
 public class EnnemyBasicsMovements : MonoBehaviour
 {
     public Collider tapette;
+    public Collider tongue;
+    public Collider raquette;
+    public Collider spray;
     public Rigidbody fly;
     public bool active;
 
     public float speed;
+    public int health = 100;
+    public string type = "fly";
+    public int damage = 50;
+
     private float step;
     public Transform target;
 
     // Use this for initialization
     void Start()
     {
-
+        target = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(active)
+        if (active)
         {
             step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
         }
-        
 
-
-    }
-    /*
-    void OnCollisionEnter(Collision col)
-    {
-        active = false;
-
-        if (col.gameObject.name == "haut")
+        if (health <= 0)
         {
-            Destroy(col.gameObject);
+            active = false;
+
+
+            fly.useGravity = true;
+            fly.isKinematic = false;
+
+            GetComponent<Collider>().isTrigger = false;
+
+            Invoke("destroy", 3f);
         }
+
     }
-    */
-    
+
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         //Debug.Log("sa marche");
@@ -55,11 +64,11 @@ public class EnnemyBasicsMovements : MonoBehaviour
             fly.useGravity = true;
             fly.isKinematic = false;
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other == tapette)
+        if (other == tapette)
         {
             active = false;
 
@@ -69,11 +78,28 @@ public class EnnemyBasicsMovements : MonoBehaviour
             fly.isKinematic = false;
 
             GetComponent<Collider>().isTrigger = false;
+
+            health -= damage;
+
+            Invoke("stun", 0.5f);
         }
-        
+
 
     }
 
+    public void stun()
+    {
+        active = true;
+        fly.useGravity = false;
+        fly.isKinematic = true;
+
+        GetComponent<Collider>().isTrigger = true;
+    }
+
+    public void destroy()
+    {
+        Destroy(gameObject);
+    }
 
 
 }
