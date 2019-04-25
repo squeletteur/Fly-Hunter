@@ -20,7 +20,8 @@ public class sabreLaser : MonoBehaviour {
     public void degaine()
     {
         laser.SetActive(true);
-        //Destroy(gameObject);
+        
+        Destroy(gameObject);
 
     }
 

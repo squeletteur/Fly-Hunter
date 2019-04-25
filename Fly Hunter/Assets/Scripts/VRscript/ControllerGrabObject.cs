@@ -58,9 +58,9 @@ public class ControllerGrabObject : MonoBehaviour {
                 useObject();
                 sabre.degaine();
             }
+            sabre.degaine();
 
-
-            if (objectSelect || objectInHand.CompareTag("sabre"))
+            if (objectSelect && objectInHand.CompareTag("sabre"))
             {
                 useObject();
                 sabre.degaine();
@@ -69,14 +69,18 @@ public class ControllerGrabObject : MonoBehaviour {
 
         }
 
-        if(objectSelect)
+        if(objectSelect && objectInHand.CompareTag("tapette"))
         {
             objectInHand.transform.position = transform.position;
             //objectInHand.transform.rotation = transform.rotation;
             //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
         }
+        if (objectSelect && objectInHand.CompareTag("sabre"))
+        {
+            sabre.degaine();
+        }
 
-       
+
 
     }
 
