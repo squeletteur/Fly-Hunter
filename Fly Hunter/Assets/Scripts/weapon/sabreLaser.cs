@@ -5,6 +5,7 @@ using UnityEngine;
 public class sabreLaser : MonoBehaviour {
 
     public GameObject laser;
+    public bool OnSaber = false;
 
 
 	// Use this for initialization
@@ -14,8 +15,16 @@ public class sabreLaser : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+		if(OnSaber == true)
+        {
+            degaine();
+        }
+
+        if (OnSaber == false)
+        {
+            rengaine();
+        }
+    }
 
     public void degaine()
     {
@@ -28,7 +37,7 @@ public class sabreLaser : MonoBehaviour {
     {
         laser.SetActive(false);
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("GameController"))
@@ -42,4 +51,5 @@ public class sabreLaser : MonoBehaviour {
     {
         rengaine();
     }
+    */
 }
