@@ -9,8 +9,8 @@ public class sabreLaser : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,13 +20,26 @@ public class sabreLaser : MonoBehaviour {
     public void degaine()
     {
         laser.SetActive(true);
-        
-        Destroy(gameObject);
+       
 
     }
 
     public void rengaine()
     {
         laser.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("GameController"))
+        {
+            degaine();
+        }
+
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        rengaine();
     }
 }

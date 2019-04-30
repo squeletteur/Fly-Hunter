@@ -20,11 +20,12 @@ public class ControllerGrabObject : MonoBehaviour {
 
 
 
-    public sabreLaser sabre;
+   
 
-    private void Start()
+    void Start()
     {
-        sabre = GetComponent<sabreLaser>();
+       
+
     }
 
     // Update is called once per frame
@@ -56,14 +57,14 @@ public class ControllerGrabObject : MonoBehaviour {
             if(objectSelect)
             {
                 useObject();
-                sabre.degaine();
+               
             }
-            sabre.degaine();
+            
 
             if (objectSelect && objectInHand.CompareTag("sabre"))
             {
                 useObject();
-                sabre.degaine();
+                
             }
 
 
@@ -75,10 +76,7 @@ public class ControllerGrabObject : MonoBehaviour {
             //objectInHand.transform.rotation = transform.rotation;
             //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
         }
-        if (objectSelect && objectInHand.CompareTag("sabre"))
-        {
-            sabre.degaine();
-        }
+        
 
 
 

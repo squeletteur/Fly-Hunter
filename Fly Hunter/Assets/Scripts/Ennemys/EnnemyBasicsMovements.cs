@@ -8,6 +8,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public Collider tongue;
     public Collider raquette;
     public Collider spray;
+    public Collider sabre;
     public Rigidbody fly;
     public bool active;
 
@@ -83,7 +84,40 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             Invoke("stun", 0.5f);
         }
-     
+
+
+        if (other == tongue)
+        {
+            active = false;
+
+            Debug.Log("sa marche");
+
+            fly.useGravity = true;
+            fly.isKinematic = false;
+
+            GetComponent<Collider>().isTrigger = false;
+
+            health -= damage;
+
+            Invoke("stun", 0.5f);
+        }
+
+
+        if (other == sabre)
+        {
+            active = false;
+
+            Debug.Log("sa marche");
+
+            fly.useGravity = true;
+            fly.isKinematic = false;
+
+            GetComponent<Collider>().isTrigger = false;
+
+            health -= damage + damage;
+
+            Invoke("stun", 0.5f);
+        }
 
     }
 
