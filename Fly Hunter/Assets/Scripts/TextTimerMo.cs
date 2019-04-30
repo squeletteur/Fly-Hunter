@@ -14,12 +14,12 @@ public class TextTimerMo : MonoBehaviour
     void Start ()
     {
         GMt = GM.GetComponent<GameManager>();
-        TextTM = GetComponent<TextMesh>().text;
+        TextTM = GetComponent<Text>().text;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        //TextTM = GMt.timer;
+        TextTM = GMt.timer;
 	}
 }

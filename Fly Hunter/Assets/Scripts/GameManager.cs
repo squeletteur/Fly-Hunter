@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public int timer = 60;
     public int score = 0;
     public int wave = 0;
     public int sousvague = 1;
