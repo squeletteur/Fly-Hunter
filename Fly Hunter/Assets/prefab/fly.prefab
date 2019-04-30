@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 195228038318600284}
   m_Layer: 0
   m_Name: fly
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fb8bd71f23bf9304b86c30aedd133097, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,9 +114,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tapette: {fileID: 0}
+  tongue: {fileID: 0}
+  raquette: {fileID: 0}
+  spray: {fileID: 0}
   fly: {fileID: 54841180888352312}
   active: 0
   speed: 2
+  health: 100
+  type: fly
+  damage: 50
   target: {fileID: 0}
 --- !u!135 &135019079790667236
 SphereCollider:

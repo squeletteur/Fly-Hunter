@@ -8,6 +8,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public Collider tongue;
     public Collider raquette;
     public Collider spray;
+    public Collider sabre;
     public Rigidbody fly;
     public bool active;
 
@@ -22,20 +23,20 @@ public class EnnemyBasicsMovements : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        target = GameObject.Find("Player").transform;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (active)
+        if(active)
         {
             step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-
+            
         }
-
-        if (health <= 0)
+        
+        if(health <= 0)
         {
             active = false;
 
@@ -49,7 +50,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         }
 
     }
-
+  
     /*
     private void OnCollisionEnter(Collision collision)
     {
@@ -67,8 +68,8 @@ public class EnnemyBasicsMovements : MonoBehaviour
     }*/
 
     private void OnTriggerEnter(Collider other)
-    {
-        if (other == tapette)
+    {   
+        if(other == tapette)
         {
             active = false;
 
@@ -84,6 +85,39 @@ public class EnnemyBasicsMovements : MonoBehaviour
             Invoke("stun", 0.5f);
         }
 
+
+        if (other == tongue)
+        {
+            active = false;
+
+            Debug.Log("sa marche");
+
+            fly.useGravity = true;
+            fly.isKinematic = false;
+
+            GetComponent<Collider>().isTrigger = false;
+
+            health -= damage;
+
+            Invoke("stun", 0.5f);
+        }
+
+
+        if (other == sabre)
+        {
+            active = false;
+
+            Debug.Log("sa marche");
+
+            fly.useGravity = true;
+            fly.isKinematic = false;
+
+            GetComponent<Collider>().isTrigger = false;
+
+            health -= damage + damage;
+
+            Invoke("stun", 0.5f);
+        }
 
     }
 

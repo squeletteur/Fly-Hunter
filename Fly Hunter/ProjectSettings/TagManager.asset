@@ -8,6 +8,8 @@ TagManager:
   - enemy
   - player
   - sabre
+  - tapette
+  - tongue
   layers:
   - Default
   - TransparentFX
