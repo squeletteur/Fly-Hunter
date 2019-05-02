@@ -5,21 +5,27 @@ using UnityEngine.UI;
 
 public class TextTimerMo : MonoBehaviour
 {
+    public GameObject TextMO;
     public GameObject GM;
     private GameManager GMt;
-    private object TextTM;
+    private Text TextTM;
 
 
     // Use this for initialization
     void Start ()
     {
         GMt = GM.GetComponent<GameManager>();
-        TextTM = GetComponent<Text>().text;
+        TextTM = TextMO.GetComponent<Text>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        TextTM = GMt.timer;
+        EditTextMO();   
 	}
+
+    void EditTextMO()
+    {
+        TextTM.text = GMt.timer.ToString();
+    }
 }
