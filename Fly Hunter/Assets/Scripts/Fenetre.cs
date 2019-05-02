@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fenetre : MonoBehaviour
 {
-    bool opened = true;
+    public bool opened = true;
     public float vitesse = 0.001f;
     public int timer;
     Vector3 posClosWndw;
@@ -15,8 +15,7 @@ public class Fenetre : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        posClosWndw = transform.position;
-        posClosWndw.y -= 2;
+        posClosWndw.y = transform.position.y - 2;
 
         posOpWndw = transform.position;
     }
@@ -34,8 +33,7 @@ public class Fenetre : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && opened == true && transform.position != posClosWndw && GM.score >= 500)
         {
             GM.score -= 500;
-            Vector3 tmp = transform.position;
-            tmp.y -= 2;
+            Vector3 tmp = posClosWndw;
             transform.position = tmp;
             if (transform.position == posClosWndw)
             {
@@ -52,8 +50,7 @@ public class Fenetre : MonoBehaviour
 
             if (timer <= 0)
             {
-                Vector3 tmp = transform.position;
-                tmp.y += 2;
+                Vector3 tmp = posOpWndw;
                 transform.position = tmp;
                 timer = 60;
                 opened = true;
