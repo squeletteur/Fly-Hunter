@@ -16,6 +16,8 @@ public class ControllerGrabObject : MonoBehaviour {
     private GameObject collidingObject; // 1
     private GameObject objectInHand; // 2
 
+    public sabreLaser monSabre;
+
 
 
 
@@ -24,7 +26,7 @@ public class ControllerGrabObject : MonoBehaviour {
 
     void Start()
     {
-       
+        
 
     }
 
@@ -61,22 +63,36 @@ public class ControllerGrabObject : MonoBehaviour {
             }
             
 
-            if (objectSelect && objectInHand.CompareTag("sabre"))
+            if (objectSelect  && objectInHand.CompareTag("sabre"))
             {
-                useObject();
-                
+                useObjectSaber();   
             }
+           
+            
+            
+            //je suis un caca
+
+
 
 
         }
 
-        if(objectSelect && objectInHand.CompareTag("tapette"))
+        
+
+        if (objectSelect && objectInHand.CompareTag("tapette"))
         {
             objectInHand.transform.position = transform.position;
             //objectInHand.transform.rotation = transform.rotation;
             //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
         }
-        
+
+        if (objectSelect && objectInHand.CompareTag("sabre"))
+        {
+            objectInHand.transform.position = transform.position;
+            //objectInHand.transform.rotation = transform.rotation;
+            //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
+        }
+
 
 
 
@@ -123,6 +139,16 @@ public class ControllerGrabObject : MonoBehaviour {
 
         //Destroy(objectInHand);
         //faire qq chose
+        
+
+    }
+
+    private void useObjectSaber()
+    {
+
+        //Destroy(objectInHand);
+        //faire qq chose
+        monSabre.OnSaber = !monSabre.OnSaber;
 
     }
 
