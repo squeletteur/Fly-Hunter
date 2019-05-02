@@ -26,6 +26,6 @@ public class TextTimerMo : MonoBehaviour
 
     void EditTextMO()
     {
-        TextTM.text = GMt.timer.ToString();
+        TextTM.text = GMt.waveDurationActual.ToString();
     }
 }
