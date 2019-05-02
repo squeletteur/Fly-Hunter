@@ -17,6 +17,7 @@ public class ControllerGrabObject : MonoBehaviour {
     private GameObject objectInHand; // 2
 
     public sabreLaser monSabre;
+    public SpawnerTongue tongue;
 
 
 
@@ -40,7 +41,8 @@ public class ControllerGrabObject : MonoBehaviour {
             {
                 GrabObject();
                 objectSelect = true;
-               
+
+                
             }
         }
 
@@ -54,6 +56,7 @@ public class ControllerGrabObject : MonoBehaviour {
             }
         }
 
+        //3
         if (useAction.GetLastStateDown(handType))
         {
             if(objectSelect)
@@ -67,17 +70,16 @@ public class ControllerGrabObject : MonoBehaviour {
             {
                 useObjectSaber();   
             }
-           
-            
-            
-            //je suis un caca
-
-
 
 
         }
 
-        
+        if (objectSelect && objectInHand.CompareTag("tongue"))
+        {
+            useObjectTongue();
+        }
+
+
 
         if (objectSelect && objectInHand.CompareTag("tapette"))
         {
@@ -89,9 +91,12 @@ public class ControllerGrabObject : MonoBehaviour {
         if (objectSelect && objectInHand.CompareTag("sabre"))
         {
             objectInHand.transform.position = transform.position;
+            
             //objectInHand.transform.rotation = transform.rotation;
             //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
         }
+
+        
 
 
 
@@ -146,9 +151,16 @@ public class ControllerGrabObject : MonoBehaviour {
     private void useObjectSaber()
     {
 
-        //Destroy(objectInHand);
-        //faire qq chose
+
         monSabre.OnSaber = !monSabre.OnSaber;
+        //monSabre.degaine();
+
+    }
+
+    private void useObjectTongue()
+    {
+
+        tongue.Spawn();
 
     }
 

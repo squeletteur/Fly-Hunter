@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnnemyBasicsMovements : MonoBehaviour
 {
     public Collider tapette;
-    public Collider tongue;
+    public GameObject tongue;
     public Collider raquette;
     public Collider spray;
     public Collider sabre;
@@ -86,9 +86,11 @@ public class EnnemyBasicsMovements : MonoBehaviour
         }
 
 
-        if (other == tongue)
+        if (other.CompareTag("tongue"))
         {
             active = false;
+
+            Destroy(other);
 
             Debug.Log("sa marche");
 
@@ -118,6 +120,8 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             Invoke("stun", 0.5f);
         }
+
+
 
     }
 
