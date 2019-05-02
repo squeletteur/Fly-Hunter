@@ -16,10 +16,15 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public int health = 100;
     public string type = "fly";
     public int damage = 50;
+    public int ajoutScore;
 
     private float step;
     private GameObject targetObject;
     private Transform target;
+    private perso cible;
+
+
+
 
     // Use this for initialization
     void Start()
@@ -59,29 +64,14 @@ public class EnnemyBasicsMovements : MonoBehaviour
         transform.rotation = rotation;
     }
   
-    /*
-    private void OnCollisionEnter(Collision collision)
-    {
-        //Debug.Log("sa marche");
-
-        if (collision.gameObject.CompareTag("weapon"))
-        {
-            active = false;
-
-            Debug.Log("sa marche");
-
-            fly.useGravity = true;
-            fly.isKinematic = false;
-        }
-    }*/
+   
 
     private void OnTriggerEnter(Collider other)
     {   
         if(other == tapette)
         {
             active = false;
-
-            Debug.Log("sa marche");
+            
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -100,7 +90,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             Destroy(other);
 
-            Debug.Log("sa marche");
+            
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -116,8 +106,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         if (other == sabre)
         {
             active = false;
-
-            Debug.Log("sa marche");
+            
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -145,7 +134,24 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public void destroy()
     {
         Destroy(gameObject);
+        
+        GameManager.Singleton.score += ajoutScore;
     }
 
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("player"))
+        {
+            
+            
+
+            cible = collision.gameObject.GetComponent<perso>();
+
+            cible.health -= damage;
+
+            Destroy(gameObject);
+
+        }
+    }
 }

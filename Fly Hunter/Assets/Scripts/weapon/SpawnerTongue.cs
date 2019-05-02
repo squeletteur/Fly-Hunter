@@ -6,9 +6,11 @@ public class SpawnerTongue : MonoBehaviour {
 
     public GameObject tongue;
     private float distance;
+    public int limite = 0;
+    private int limiteMax = 2;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         Instantiate(tongue);
     }
 	
@@ -23,6 +25,8 @@ public class SpawnerTongue : MonoBehaviour {
         }
         */
 
+
+
 	}
     /*
     private void OnTriggerExit(Collider other)
@@ -35,8 +39,23 @@ public class SpawnerTongue : MonoBehaviour {
 
     */
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("enemy"))
+        {
+            limite--;
+            Destroy(gameObject);
+        }
+    }
+
     public void Spawn()
     {
-        //Instantiate(tongue);
+        if(limite <= limiteMax)
+        {
+            Instantiate(tongue);
+            limite++;
+        }
+        
     }
 }

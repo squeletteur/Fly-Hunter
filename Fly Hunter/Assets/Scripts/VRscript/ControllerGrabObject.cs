@@ -160,7 +160,8 @@ public class ControllerGrabObject : MonoBehaviour {
     private void useObjectTongue()
     {
 
-        tongue.Spawn();
+        //tongue.Spawn();
+        Invoke("tongue.Spawn", 2f);
 
     }
 
