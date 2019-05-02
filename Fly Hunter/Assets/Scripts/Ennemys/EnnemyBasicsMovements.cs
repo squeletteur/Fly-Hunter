@@ -18,11 +18,15 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public int damage = 50;
 
     private float step;
-    public Transform target;
+    private GameObject targetObject;
+    private Transform target;
 
     // Use this for initialization
     void Start()
     {
+        targetObject = GameObject.Find("Player");
+        target = targetObject.transform;
+
 
     }
 
@@ -33,7 +37,6 @@ public class EnnemyBasicsMovements : MonoBehaviour
         {
             step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
-            
         }
         
         if(health <= 0)
@@ -49,6 +52,11 @@ public class EnnemyBasicsMovements : MonoBehaviour
             Invoke("destroy", 3f);
         }
 
+        Vector3 relativePos = target.position - transform.position;
+
+        // the second argument, upwards, defaults to Vector3.up
+        Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+        transform.rotation = rotation;
     }
   
     /*
