@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int timer = 60;
+    public static GameManager Singleton;
+
     public int score = 0;
     public int wave = 0;
     public int sousvague = 1;
@@ -19,6 +20,18 @@ public class GameManager : MonoBehaviour
 
     public float waveDuration;
     public float waveDurationActual;
+
+    private void Awake()
+    {
+        if (Singleton != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Singleton = this;
+        }
+    }
 
     // Use this for initialization
     void Start ()
@@ -44,7 +57,7 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		if ((wave == 1) && (interWave == false))
+        if ((wave == 1) && (interWave == false))
         {
             waveDurationActual -= Time.deltaTime;
 

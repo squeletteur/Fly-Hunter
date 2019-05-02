@@ -40,7 +40,7 @@ public class SpawnerManager : MonoBehaviour
 
 
 
-        /*for (i = 0; i <= ennemyCount; i++)
+        for (i = 0; i <= ennemyCount; i++)
         {
             standardIntervallSpawn[i] --;
 
@@ -51,7 +51,7 @@ public class SpawnerManager : MonoBehaviour
                 standardIntervallSpawn[i] += spawnIntervalAtStart[i];
                 Instantiate(ennemys[i], positionsParent.GetChild(Random.Range(0, positionsParent.childCount)).position, Quaternion.identity);
             }
-        }*/
+        }
     }
 
 }
