@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 114577971806393176}
   - component: {fileID: 114377410171486956}
   m_Layer: 0
-  m_Name: Fly 1
+  m_Name: Fly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,9 +1198,23 @@ MonoBehaviour:
   spawnCDWave1: 4
   spawnCDWave2: 7
   spawnCDWave3: 3
+  spawnCDWave4: 0
+  spawnCDWave5: 0
+  spawnCDWave6: 0
+  spawnCDWave7: 0
+  spawnCDWave8: 0
+  spawnCDWave9: 0
+  spawnCDWave10: 0
   isInWave1: 1
   isInWave2: 1
   isInWave3: 1
+  isInWave4: 0
+  isInWave5: 0
+  isInWave6: 0
+  isInWave7: 0
+  isInWave8: 0
+  isInWave9: 0
+  isInWave10: 0
 --- !u!114 &114577971806393176
 MonoBehaviour:
   m_ObjectHideFlags: 1
