@@ -53,7 +53,7 @@ public class SpawnerTongue : MonoBehaviour {
     {
         if(limite <= limiteMax)
         {
-            Instantiate(tongue);
+            Instantiate(tongue, transform.position, transform.rotation);
             limite++;
         }
         

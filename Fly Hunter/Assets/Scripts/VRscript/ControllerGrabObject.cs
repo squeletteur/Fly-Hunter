@@ -16,7 +16,9 @@ public class ControllerGrabObject : MonoBehaviour {
     private GameObject collidingObject; // 1
     private GameObject objectInHand; // 2
 
-    public sabreLaser monSabre;
+    private sabreLaser monSabre;
+    private spray monSpray;
+    private arbalete monArbalete;
     public SpawnerTongue tongue;
 
 
@@ -72,6 +74,17 @@ public class ControllerGrabObject : MonoBehaviour {
             }
 
 
+            if (objectSelect && objectInHand.CompareTag("spray"))
+            {
+                useObjectSpray();
+            }
+
+            if (objectSelect && objectInHand.CompareTag("arbalete"))
+            {
+                useObjectArbalete();
+            }
+
+
         }
 
         if (objectSelect && objectInHand.CompareTag("tongue"))
@@ -91,12 +104,30 @@ public class ControllerGrabObject : MonoBehaviour {
         if (objectSelect && objectInHand.CompareTag("sabre"))
         {
             objectInHand.transform.position = transform.position;
-            
+            monSabre = objectInHand.GetComponent<sabreLaser>();
+
             //objectInHand.transform.rotation = transform.rotation;
             //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
         }
 
-        
+        if (objectSelect && objectInHand.CompareTag("spray"))
+        {
+            objectInHand.transform.position = transform.position;
+            monSpray = objectInHand.GetComponent<spray>();
+
+            //objectInHand.transform.rotation = transform.rotation;
+            //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
+        }
+
+        if (objectSelect && objectInHand.CompareTag("arbalete"))
+        {
+            objectInHand.transform.position = transform.position;
+            monArbalete = objectInHand.GetComponent<arbalete>();
+
+            objectInHand.transform.rotation = transform.rotation;
+            //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
+        }
+
 
 
 
@@ -157,11 +188,25 @@ public class ControllerGrabObject : MonoBehaviour {
 
     }
 
+    private void useObjectSpray()
+    {
+
+
+        monSpray.OnSpray = !monSpray.OnSpray;
+        
+
+    }
+
+    private void useObjectArbalete()
+    {
+        monArbalete.LaunchProjectile();
+    }
+
     private void useObjectTongue()
     {
 
-        //tongue.Spawn();
-        Invoke("tongue.Spawn", 2f);
+        tongue.Spawn();
+        //Invoke("tongue.Spawn", 2f);
 
     }
 

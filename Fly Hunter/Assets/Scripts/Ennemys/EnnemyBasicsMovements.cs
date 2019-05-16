@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnnemyBasicsMovements : MonoBehaviour
 {
-    public Collider tapette;
+    /*public Collider tapette;
     public GameObject tongue;
     public Collider raquette;
     public Collider spray;
-    public Collider sabre;
+    public Collider sabre;*/
     public Rigidbody fly;
     public bool active;
 
@@ -16,11 +16,12 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public int health = 100;
     public string type = "fly";
     public int damage = 50;
+    public int damageDoPlayer = 50;
     public int ajoutScore;
 
     private float step;
     private GameObject targetObject;
-    private Transform target;
+    public Transform target;
     private perso cible;
 
 
@@ -68,7 +69,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {   
-        if(other == tapette)
+        if(other.CompareTag("tapetteCollid"))
         {
             active = false;
             
@@ -88,7 +89,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         {
             active = false;
 
-            Destroy(other);
+            //Destroy(other);
 
             
 
@@ -97,13 +98,13 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            health -= damage;
+            health -= damage*2;
 
             Invoke("stun", 0.5f);
         }
 
 
-        if (other == sabre)
+        if (other.CompareTag("sabreCollid"))
         {
             active = false;
             
@@ -116,6 +117,16 @@ public class EnnemyBasicsMovements : MonoBehaviour
             health -= damage + damage;
 
             Invoke("stun", 0.5f);
+        }
+
+        if (other.CompareTag("player"))
+        {
+
+            GameManager.Singleton.vie -= damageDoPlayer;
+
+            health = 0;
+            
+
         }
 
 
@@ -138,20 +149,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         GameManager.Singleton.score += ajoutScore;
     }
 
+   
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("player"))
-        {
-            
-            
-
-            cible = collision.gameObject.GetComponent<perso>();
-
-            cible.health -= damage;
-
-            Destroy(gameObject);
-
-        }
-    }
+   
 }

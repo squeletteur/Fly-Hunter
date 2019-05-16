@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Singleton;
 
     public int score = 0;
+    public int vie = 200;
     public int wave = 0;
     public int sousvague = 1;
     bool interWave = true;

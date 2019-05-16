@@ -114,7 +114,6 @@ GameObject:
   - component: {fileID: 114796183311534084}
   - component: {fileID: 114005834329859128}
   - component: {fileID: 114184319201843528}
-  - component: {fileID: 195228038318600284}
   m_Layer: 0
   m_Name: Bee
   m_TagString: enemy
@@ -949,7 +948,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1134754627540066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.01, y: 3.19, z: 5.93}
+  m_LocalPosition: {x: 2.01, y: 3.19, z: 3.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4584895909531780}
@@ -1226,7 +1225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54b4f8535a727e44855387c4f5f9836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slalumSpeed: 4
+  slalumSpeed: 2
   timeToReverse: 1
 --- !u!114 &114184319201843528
 MonoBehaviour:
@@ -1239,7 +1238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717cafdf4eaff3a4d9557c7b11a56ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCDWave1: 4
+  spawnCDWave1: 6
   spawnCDWave2: 0
   spawnCDWave3: 0
   isInWave1: 1
@@ -1256,25 +1255,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41a6111b5848d441b903e66cd34c3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  wave: 0
-  sousvague: 1
-  ennemys: []
-  positionsParent: {fileID: 0}
-  waveDuration: 0
-  waveDurationActual: 0
-  tapette: {fileID: 0}
-  tongue: {fileID: 0}
-  raquette: {fileID: 0}
-  spray: {fileID: 0}
-  sabre: {fileID: 0}
   fly: {fileID: 54841180888352312}
   active: 1
-  speed: 3
+  speed: 2
   health: 100
-  type: fly
+  type: bee
   damage: 50
-  ajoutScore: 0
+  damageDoPlayer: 40
+  ajoutScore: 30
+  target: {fileID: 0}
 --- !u!135 &135019079790667236
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1372,24 +1361,3 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.12650207, y: -0.04096979, z: 0.00532642}
     m_Extent: {x: 0.28677264, y: 0.31206685, z: 0.23678103}
   m_DirtyAABB: 0
---- !u!195 &195228038318600284
-NavMeshAgent:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1134754627540066}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4

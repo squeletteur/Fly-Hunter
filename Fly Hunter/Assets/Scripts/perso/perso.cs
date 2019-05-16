@@ -31,7 +31,7 @@ public class perso : MonoBehaviour
         }
     }
     */
-
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("enemy"))
@@ -44,5 +44,5 @@ public class perso : MonoBehaviour
             enemy = collision.gameObject.GetComponent<EnnemyBasicsMovements>();
             enemy.stun();
         }
-    }
+    }*/
 }

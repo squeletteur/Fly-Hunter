@@ -10,6 +10,11 @@ TagManager:
   - sabre
   - tapette
   - tongue
+  - tapetteCollid
+  - sabreCollid
+  - spray
+  - arbalete
+  - baguetteCollid
   layers:
   - Default
   - TransparentFX
