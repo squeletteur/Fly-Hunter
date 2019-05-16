@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1894075275483472}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0.0000001490116}
-  m_LocalPosition: {x: 0, y: 0, z: 2.18}
+  m_LocalPosition: {x: 0, y: 0, z: 2.943}
   m_LocalScale: {x: 1.26, y: 1.26, z: 3.4235826}
   m_Children: []
   m_Father: {fileID: 4733683098828694}
@@ -243,6 +243,6 @@ MonoBehaviour:
   - {fileID: 4562769215351874}
   projectilePrefab: {fileID: 54409023007227254, guid: 9a6e2091ba97d0d449814713e08f7bbf,
     type: 2}
-  launchForce: 700
+  launchForce: 1200
   projectileTransform: {fileID: 4843039840260742}
   fire: 0

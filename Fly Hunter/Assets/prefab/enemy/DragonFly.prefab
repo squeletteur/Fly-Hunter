@@ -1284,7 +1284,7 @@ MonoBehaviour:
   type: fly
   damage: 50
   damageDoPlayer: 50
-  ajoutScore: 0
+  ajoutScore: 100
   target: {fileID: 0}
 --- !u!135 &135827344200154704
 SphereCollider:
