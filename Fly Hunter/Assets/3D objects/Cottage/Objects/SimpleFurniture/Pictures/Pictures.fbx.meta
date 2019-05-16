@@ -1,0 +1,208 @@
+fileFormatVersion: 2
+guid: b8e9f723839f0084db492857b6ffc3bf
+timeCreated: 1469027077
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BadPic1
+    100002: BadPic2
+    100004: BadPic3
+    100006: BadPic4
+    100008: CabPic
+    100010: Hall1FlPic
+    100012: Hall1FlPic2
+    100014: Hall2FlPic
+    100016: Hall2FlPic2
+    100018: HallBigPic
+    100020: HallBigPic2
+    100022: KitchPic
+    100024: //RootNode
+    100026: 1
+    100028: 10
+    100030: 2
+    100032: 3
+    100034: 4
+    100036: 5
+    100038: 6
+    100040: 7
+    100042: 8
+    100044: 9
+    400000: BadPic1
+    400002: BadPic2
+    400004: BadPic3
+    400006: BadPic4
+    400008: CabPic
+    400010: Hall1FlPic
+    400012: Hall1FlPic2
+    400014: Hall2FlPic
+    400016: Hall2FlPic2
+    400018: HallBigPic
+    400020: HallBigPic2
+    400022: KitchPic
+    400024: //RootNode
+    400026: 1
+    400028: 10
+    400030: 2
+    400032: 3
+    400034: 4
+    400036: 5
+    400038: 6
+    400040: 7
+    400042: 8
+    400044: 9
+    2300000: BadPic1
+    2300002: BadPic2
+    2300004: BadPic3
+    2300006: BadPic4
+    2300008: CabPic
+    2300010: Hall1FlPic
+    2300012: Hall1FlPic2
+    2300014: Hall2FlPic
+    2300016: Hall2FlPic2
+    2300018: HallBigPic
+    2300020: HallBigPic2
+    2300022: KitchPic
+    2300024: 1
+    2300026: 10
+    2300028: 2
+    2300030: 3
+    2300032: 4
+    2300034: 5
+    2300036: 6
+    2300038: 7
+    2300040: 8
+    2300042: 9
+    2300044: //RootNode
+    3300000: BadPic1
+    3300002: BadPic2
+    3300004: BadPic3
+    3300006: BadPic4
+    3300008: CabPic
+    3300010: Hall1FlPic
+    3300012: Hall1FlPic2
+    3300014: Hall2FlPic
+    3300016: Hall2FlPic2
+    3300018: HallBigPic
+    3300020: HallBigPic2
+    3300022: KitchPic
+    3300024: 1
+    3300026: 10
+    3300028: 2
+    3300030: 3
+    3300032: 4
+    3300034: 5
+    3300036: 6
+    3300038: 7
+    3300040: 8
+    3300042: 9
+    3300044: //RootNode
+    4300000: CabPic
+    4300002: BadPic1
+    4300004: Hall1FlPic2
+    4300006: Hall1FlPic
+    4300008: Hall2FlPic2
+    4300010: Hall2FlPic
+    4300012: HallBigPic
+    4300014: HallBigPic2
+    4300016: KitchPic
+    4300018: BadPic2
+    4300020: BadPic3
+    4300022: BadPic4
+    4300024: 9
+    4300026: 8
+    4300028: 6
+    4300030: 7
+    4300032: 5
+    4300034: 4
+    4300036: 3
+    4300038: 2
+    4300040: 1
+    4300042: 10
+    6400000: BadPic1
+    6400002: BadPic2
+    6400004: BadPic3
+    6400006: BadPic4
+    6400008: CabPic
+    6400010: Hall1FlPic
+    6400012: Hall1FlPic2
+    6400014: Hall2FlPic
+    6400016: Hall2FlPic2
+    6400018: HallBigPic
+    6400020: HallBigPic2
+    6400022: KitchPic
+    6400024: 1
+    6400026: 10
+    6400028: 2
+    6400030: 3
+    6400032: 4
+    6400034: 5
+    6400036: 6
+    6400038: 7
+    6400040: 8
+    6400042: 9
+    6400044: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1.5
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
