@@ -1197,24 +1197,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCDWave1: 4
   spawnCDWave2: 7
-  spawnCDWave3: 3
-  spawnCDWave4: 0
-  spawnCDWave5: 0
-  spawnCDWave6: 0
-  spawnCDWave7: 0
+  spawnCDWave3: 4
+  spawnCDWave4: 4
+  spawnCDWave5: 4
+  spawnCDWave6: 5
+  spawnCDWave7: 4
   spawnCDWave8: 0
-  spawnCDWave9: 0
-  spawnCDWave10: 0
+  spawnCDWave9: 4
+  spawnCDWave10: 3
   isInWave1: 1
   isInWave2: 1
-  isInWave3: 1
-  isInWave4: 0
-  isInWave5: 0
-  isInWave6: 0
-  isInWave7: 0
+  isInWave3: 0
+  isInWave4: 1
+  isInWave5: 1
+  isInWave6: 1
+  isInWave7: 1
   isInWave8: 0
-  isInWave9: 0
-  isInWave10: 0
+  isInWave9: 1
+  isInWave10: 1
 --- !u!114 &114577971806393176
 MonoBehaviour:
   m_ObjectHideFlags: 1

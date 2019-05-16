@@ -1238,12 +1238,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717cafdf4eaff3a4d9557c7b11a56ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCDWave1: 6
-  spawnCDWave2: 0
-  spawnCDWave3: 0
-  isInWave1: 1
+  spawnCDWave1: 12
+  spawnCDWave2: 5
+  spawnCDWave3: 5
+  spawnCDWave4: 8
+  spawnCDWave5: 5
+  spawnCDWave6: 7
+  spawnCDWave7: 5
+  spawnCDWave8: 3
+  spawnCDWave9: 5
+  spawnCDWave10: 4
+  isInWave1: 0
   isInWave2: 0
   isInWave3: 0
+  isInWave4: 1
+  isInWave5: 1
+  isInWave6: 1
+  isInWave7: 1
+  isInWave8: 1
+  isInWave9: 1
+  isInWave10: 1
 --- !u!114 &114796183311534084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1258,7 +1272,7 @@ MonoBehaviour:
   fly: {fileID: 54841180888352312}
   active: 1
   speed: 2
-  health: 100
+  health: 200
   type: bee
   damage: 50
   damageDoPlayer: 40
