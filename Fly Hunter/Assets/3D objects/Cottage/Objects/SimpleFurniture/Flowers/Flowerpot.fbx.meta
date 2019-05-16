@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: 34f9cd64e3f4e6f4da72b8a6196201d3
+timeCreated: 1467493039
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Flowerpot
+    100004: Flowerpot.001
+    100006: Flowerpot.002
+    100008: Flowerpot.003
+    100010: Flowerpot.004
+    100012: Flowerpot.005
+    100014: Flowerpot.006
+    100016: Flowerpot.007
+    100018: Flowers
+    100020: Flowers.001
+    100022: Flowers.002
+    100024: Flowers.003
+    100026: Flowers.004
+    100028: Flowers.005
+    100030: Flowers.006
+    100032: Flowers.007
+    400000: //RootNode
+    400002: Flowerpot
+    400004: Flowerpot.001
+    400006: Flowerpot.002
+    400008: Flowerpot.003
+    400010: Flowerpot.004
+    400012: Flowerpot.005
+    400014: Flowerpot.006
+    400016: Flowerpot.007
+    400018: Flowers
+    400020: Flowers.001
+    400022: Flowers.002
+    400024: Flowers.003
+    400026: Flowers.004
+    400028: Flowers.005
+    400030: Flowers.006
+    400032: Flowers.007
+    2300000: Flowerpot
+    2300002: Flowerpot.001
+    2300004: Flowerpot.002
+    2300006: Flowerpot.003
+    2300008: Flowerpot.004
+    2300010: Flowerpot.005
+    2300012: Flowerpot.006
+    2300014: Flowerpot.007
+    2300016: Flowers
+    2300018: Flowers.001
+    2300020: Flowers.002
+    2300022: Flowers.003
+    2300024: Flowers.004
+    2300026: Flowers.005
+    2300028: Flowers.006
+    2300030: Flowers.007
+    3300000: Flowerpot
+    3300002: Flowerpot.001
+    3300004: Flowerpot.002
+    3300006: Flowerpot.003
+    3300008: Flowerpot.004
+    3300010: Flowerpot.005
+    3300012: Flowerpot.006
+    3300014: Flowerpot.007
+    3300016: Flowers
+    3300018: Flowers.001
+    3300020: Flowers.002
+    3300022: Flowers.003
+    3300024: Flowers.004
+    3300026: Flowers.005
+    3300028: Flowers.006
+    3300030: Flowers.007
+    4300000: Flowerpot.007
+    4300002: Flowers.007
+    4300004: Flowers.006
+    4300006: Flowerpot.006
+    4300008: Flowers.005
+    4300010: Flowerpot.005
+    4300012: Flowerpot.004
+    4300014: Flowers.004
+    4300016: Flowerpot.003
+    4300018: Flowers.003
+    4300020: Flowers.002
+    4300022: Flowerpot.002
+    4300024: Flowerpot.001
+    4300026: Flowers.001
+    4300028: Flowers
+    4300030: Flowerpot
+    6400000: Flowerpot
+    6400002: Flowerpot.001
+    6400004: Flowerpot.002
+    6400006: Flowerpot.003
+    6400008: Flowerpot.004
+    6400010: Flowerpot.005
+    6400012: Flowerpot.006
+    6400014: Flowerpot.007
+    6400016: Flowers
+    6400018: Flowers.001
+    6400020: Flowers.002
+    6400022: Flowers.003
+    6400024: Flowers.004
+    6400026: Flowers.005
+    6400028: Flowers.006
+    6400030: Flowers.007
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1.5
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
