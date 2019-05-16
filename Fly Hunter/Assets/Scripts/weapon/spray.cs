@@ -6,6 +6,7 @@ public class spray : MonoBehaviour {
 
 
     public ParticleSystem sprayEffect;
+    public GameObject spraycube;
     public bool OnSpray = false;
 
 
@@ -20,7 +21,9 @@ public class spray : MonoBehaviour {
     {
         if (OnSpray == true)
         {
-            if(!sprayEffect.isPlaying)
+            spraycube.SetActive(true);
+
+            if (!sprayEffect.isPlaying)
             {
                 active();
                 sprayEffect.Play();
@@ -30,7 +33,8 @@ public class spray : MonoBehaviour {
 
         if (OnSpray == false)
         {
-            
+            spraycube.SetActive(false);
+
             if (sprayEffect.isPlaying)
             {
                 inactive();
