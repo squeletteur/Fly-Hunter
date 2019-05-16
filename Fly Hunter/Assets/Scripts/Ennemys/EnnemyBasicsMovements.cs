@@ -119,6 +119,21 @@ public class EnnemyBasicsMovements : MonoBehaviour
             Invoke("stun", 0.5f);
         }
 
+        if (other.CompareTag("mobilierCollid"))
+        {
+            active = false;
+
+
+            fly.useGravity = true;
+            fly.isKinematic = false;
+
+            GetComponent<Collider>().isTrigger = false;
+
+            health -= damage;
+
+            Invoke("stun", 0.5f);
+        }
+
         if (other.CompareTag("player"))
         {
 

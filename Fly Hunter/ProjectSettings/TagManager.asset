@@ -15,6 +15,7 @@ TagManager:
   - spray
   - arbalete
   - baguetteCollid
+  - mobilierCollid
   layers:
   - Default
   - TransparentFX
