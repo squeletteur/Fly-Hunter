@@ -5,17 +5,14 @@ using UnityEngine.UI;
 
 public class TextTimerMo : MonoBehaviour
 {
-    public GameObject TextMO;
-    public GameObject GM;
-    private GameManager GMt;
-    private Text TextTM;
-
+    [Header ("Recup")]
+    public Text TextMO;
+    public GameManager GM;
 
     // Use this for initialization
     void Start ()
     {
-        GMt = GM.GetComponent<GameManager>();
-        TextTM = TextMO.GetComponent<Text>();
+
     }
 	
 	// Update is called once per frame
@@ -26,6 +23,6 @@ public class TextTimerMo : MonoBehaviour
 
     void EditTextMO()
     {
-        TextTM.text = GMt.waveDurationActual.ToString();
+        TextMO.text = GM.waveDurationActual.ToString();
     }
 }

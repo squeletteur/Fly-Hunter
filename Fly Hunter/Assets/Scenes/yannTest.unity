@@ -671,8 +671,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788c65e5dd27d5f40bca11f324288dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextMO: {fileID: 1606906935}
-  GM: {fileID: 1703620618}
+  TextMO: {fileID: 1606906937}
+  GM: {fileID: 1703620620}
 --- !u!1 &1162010769
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,13 +743,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1162010769}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -423.61603, y: -180.227, z: 64.2626}
+  m_LocalRotation: {x: -0, y: 0.15009746, z: -0, w: 0.98867124}
+  m_LocalPosition: {x: -426.005, y: -179.69, z: 64.2626}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 957934824}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 17.265001, z: 0}
 --- !u!1 &1330205305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 1500
+  vie: 200
   wave: 0
   sousvague: 1
   ennemys: []
