@@ -1244,12 +1244,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717cafdf4eaff3a4d9557c7b11a56ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCDWave1: 3
-  spawnCDWave2: 2
-  spawnCDWave3: 0
-  isInWave1: 1
+  spawnCDWave1: 5
+  spawnCDWave2: 7
+  spawnCDWave3: 3
+  spawnCDWave4: 0
+  spawnCDWave5: 0
+  spawnCDWave6: 8
+  spawnCDWave7: 7
+  spawnCDWave8: 0
+  spawnCDWave9: 6
+  spawnCDWave10: 5
+  isInWave1: 0
   isInWave2: 1
-  isInWave3: 0
+  isInWave3: 1
+  isInWave4: 0
+  isInWave5: 0
+  isInWave6: 1
+  isInWave7: 1
+  isInWave8: 0
+  isInWave9: 1
+  isInWave10: 1
 --- !u!135 &135158333331574216
 SphereCollider:
   m_ObjectHideFlags: 1
