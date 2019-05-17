@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 114264932283973756}
   - component: {fileID: 54489337029317792}
   m_Layer: 0
-  m_Name: DragonFly
+  m_Name: Libelule
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1295,11 +1295,12 @@ MonoBehaviour:
   active: 1
   speed: 1
   health: 400
-  type: fly
+  type: libelule
   damage: 50
   damageDoPlayer: 50
   ajoutScore: 100
   target: {fileID: 0}
+  Ragdoll: {fileID: 1311586067010140, guid: d8154e8f1103c3048be2c523aefbdaa8, type: 2}
 --- !u!135 &135827344200154704
 SphereCollider:
   m_ObjectHideFlags: 1

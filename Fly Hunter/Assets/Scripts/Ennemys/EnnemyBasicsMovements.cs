@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class EnnemyBasicsMovements : MonoBehaviour
 {
-    /*public Collider tapette;
-    public GameObject tongue;
-    public Collider raquette;
-    public Collider spray;
-    public Collider sabre;*/
+    
     public Rigidbody fly;
     public bool active;
 
@@ -23,6 +19,9 @@ public class EnnemyBasicsMovements : MonoBehaviour
     private GameObject targetObject;
     public Transform target;
     private perso cible;
+
+    public GameObject Ragdoll;
+    
 
 
 
@@ -174,6 +173,10 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
     public void destroy()
     {
+        
+        Instantiate(Ragdoll);
+       
+
         Destroy(gameObject);
         
         GameManager.Singleton.score += ajoutScore;

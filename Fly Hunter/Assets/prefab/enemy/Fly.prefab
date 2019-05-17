@@ -1235,6 +1235,7 @@ MonoBehaviour:
   damageDoPlayer: 20
   ajoutScore: 20
   target: {fileID: 0}
+  Ragdoll: {fileID: 1095746771838654, guid: b15a247da66c7864bbf68a0ce1f251b7, type: 2}
 --- !u!135 &135426739006551070
 SphereCollider:
   m_ObjectHideFlags: 1
