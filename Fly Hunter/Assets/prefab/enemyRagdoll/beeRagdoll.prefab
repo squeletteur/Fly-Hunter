@@ -268,6 +268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4435411733312266}
+  - component: {fileID: 114477512788564808}
   m_Layer: 0
   m_Name: beeRagdoll
   m_TagString: Untagged
@@ -1363,6 +1364,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0940381, y: 0.056121826, z: 0.056122147}
   m_Center: {x: -0.0031471178, y: -0.009925861, z: -0.028060857}
+--- !u!114 &114477512788564808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1405341325947152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962cbfe8457249540af04ce0ebebc645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxTime: 3
 --- !u!135 &135036378678346152
 SphereCollider:
   m_ObjectHideFlags: 1

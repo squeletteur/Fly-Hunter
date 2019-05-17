@@ -54,7 +54,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            Invoke("destroy", 3f);
+            Invoke("destroy", 0f);
         }
 
         Vector3 relativePos = target.position - transform.position;
@@ -174,7 +174,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public void destroy()
     {
         
-        Instantiate(Ragdoll);
+        Instantiate(Ragdoll, transform.position, transform.rotation);
        
 
         Destroy(gameObject);

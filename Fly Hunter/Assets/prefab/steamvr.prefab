@@ -517,7 +517,7 @@ MonoBehaviour:
   handType: 1
   controllerPose: {fileID: 114887024520238940}
   teleportAction:
-    actionPath: /actions/default/in/Teleport
+    actionPath: /actions/default/in/InteractUI
     needsReinit: 0
   laserPrefab: {fileID: 1157469793369392, guid: 0f86e7f34a36a4f4eb7d63333d7646e7,
     type: 2}
@@ -535,7 +535,7 @@ MonoBehaviour:
   handType: 2
   controllerPose: {fileID: 114265615962761760}
   teleportAction:
-    actionPath: /actions/default/in/Teleport
+    actionPath: /actions/default/in/InteractUI
     needsReinit: 0
   laserPrefab: {fileID: 1157469793369392, guid: 0f86e7f34a36a4f4eb7d63333d7646e7,
     type: 2}
