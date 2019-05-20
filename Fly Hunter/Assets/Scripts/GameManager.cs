@@ -188,7 +188,7 @@ public class GameManager : MonoBehaviour
 
             for (int i = 0; i < ennemys.Count; i++)
             {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave3();
+                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave4();
 
                 if (isIn == true)
                 {
@@ -218,7 +218,7 @@ public class GameManager : MonoBehaviour
 
             for (int i = 0; i < ennemys.Count; i++)
             {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave3();
+                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave5();
 
                 if (isIn == true)
                 {
@@ -248,7 +248,7 @@ public class GameManager : MonoBehaviour
 
             for (int i = 0; i < ennemys.Count; i++)
             {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave3();
+                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave6();
 
                 if (isIn == true)
                 {
@@ -278,7 +278,7 @@ public class GameManager : MonoBehaviour
 
             for (int i = 0; i < ennemys.Count; i++)
             {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave3();
+                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave7();
 
                 if (isIn == true)
                 {
@@ -308,7 +308,7 @@ public class GameManager : MonoBehaviour
 
             for (int i = 0; i < ennemys.Count; i++)
             {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave3();
+                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave8();
 
                 if (isIn == true)
                 {
@@ -338,7 +338,7 @@ public class GameManager : MonoBehaviour
 
             for (int i = 0; i < ennemys.Count; i++)
             {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave3();
+                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave9();
 
                 if (isIn == true)
                 {
@@ -368,7 +368,7 @@ public class GameManager : MonoBehaviour
 
             for (int i = 0; i < ennemys.Count; i++)
             {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave3();
+                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave10();
 
                 if (isIn == true)
                 {

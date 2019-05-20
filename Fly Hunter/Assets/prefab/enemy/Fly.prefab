@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnCDWave1: 4
-  spawnCDWave2: 7
+  spawnCDWave2: 5
   spawnCDWave3: 4
   spawnCDWave4: 4
   spawnCDWave5: 4
