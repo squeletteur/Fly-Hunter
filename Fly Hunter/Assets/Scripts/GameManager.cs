@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
 
     public float waveDuration;
     public float waveDurationActual;
+    public GameObject waveNumber;
+    public Text WaveNumberText;
 
     private void Awake()
     {
@@ -42,13 +45,20 @@ public class GameManager : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         waveDurationActual = waveDuration;
 
         ennemysCDWave1 = new List<float>();
         ennemysCDWave2 = new List<float>();
         ennemysCDWave3 = new List<float>();
+        ennemysCDWave4 = new List<float>();
+        ennemysCDWave5 = new List<float>();
+        ennemysCDWave6 = new List<float>();
+        ennemysCDWave7 = new List<float>();
+        ennemysCDWave8 = new List<float>();
+        ennemysCDWave9 = new List<float>();
+        ennemysCDWave10 = new List<float>();
 
         for (int i = 0; i < ennemys.Count; i++)
         {
@@ -56,21 +66,19 @@ public class GameManager : MonoBehaviour
             ennemysCDWave1.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave1CD());
             ennemysCDWave2.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave2CD());
             ennemysCDWave3.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave3CD());
-            ennemysCDWave3.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave4CD());
-            ennemysCDWave3.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave5CD());
-            ennemysCDWave3.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave6CD());
-            ennemysCDWave3.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave7CD());
-            ennemysCDWave3.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave8CD());
-            ennemysCDWave3.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave9CD());
-            ennemysCDWave3.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave10CD());
+            ennemysCDWave4.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave4CD());
+            ennemysCDWave5.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave5CD());
+            ennemysCDWave6.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave6CD());
+            ennemysCDWave7.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave7CD());
+            ennemysCDWave8.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave8CD());
+            ennemysCDWave9.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave9CD());
+            ennemysCDWave10.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave10CD());
             Debug.Log(ennemysCDWave1[i]);
         }
-
-        StartWave();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
 
         //wave 1
@@ -372,10 +380,8 @@ public class GameManager : MonoBehaviour
             }
         }
 
-
-
         if (Input.GetKeyDown("space"))
-            {
+        {
             StartWave();
         }
     }
@@ -389,6 +395,12 @@ public class GameManager : MonoBehaviour
     {
         wave++;
         interWave = false;
+        ShowingWaveNumber(wave, waveNumber, WaveNumberText);
     }
 
+    public void ShowingWaveNumber(float waveNumber, GameObject WaveNumber, Text WaveNumberText)
+    {
+        WaveNumberText.text = ("Wave" + waveNumber);
+        WaveNumber.GetComponent<Animator>().SetTrigger("AnimationWaveNumber");
+    }
 }
