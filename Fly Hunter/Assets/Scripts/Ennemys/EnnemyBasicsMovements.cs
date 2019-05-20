@@ -19,6 +19,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
     private GameObject targetObject;
     public Transform target;
     private perso cible;
+    public Animation anim;
 
     public GameObject Ragdoll;
     public GameObject blood;
@@ -50,21 +51,24 @@ public class EnnemyBasicsMovements : MonoBehaviour
         if(health <= 0)
         {
             active = false;
-
-
+            isDead = true;
+            anim.enabled = false;
             fly.useGravity = true;
             fly.isKinematic = false;
 
             GetComponent<Collider>().isTrigger = false;
 
-            Invoke("destroy", 0f);
+            Invoke("destroy", 2f);
         }
 
         Vector3 relativePos = target.position - transform.position;
 
         // the second argument, upwards, defaults to Vector3.up
-        Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
-        transform.rotation = rotation;
+        if (isDead == false)
+            {
+            Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+            transform.rotation = rotation;
+        }
     }
   
    
@@ -120,7 +124,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             Invoke("stun", 0.5f);
         }
-
+        
         if (other.CompareTag("mobilierCollid"))
         {
             active = false;
@@ -131,7 +135,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            health -= damage;
+            health -= damage / 2;
 
             Invoke("stun", 0.5f);
         }
@@ -178,9 +182,9 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
     public void destroy()
     {
-        isDead = true;
-        Instantiate(blood, transform.position, transform.rotation);
-        Instantiate(Ragdoll, transform.position, transform.rotation);
+        
+        //Instantiate(blood, transform.position, transform.rotation);
+        //Instantiate(Ragdoll, transform.position, transform.rotation);
        
 
         Destroy(gameObject);

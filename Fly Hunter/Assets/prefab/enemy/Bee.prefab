@@ -1278,6 +1278,7 @@ MonoBehaviour:
   damageDoPlayer: 40
   ajoutScore: 30
   target: {fileID: 0}
+  anim: {fileID: 111797600999684352}
   Ragdoll: {fileID: 1405341325947152, guid: 50478f1e34d7144428f83a4ea5bf83eb, type: 2}
   blood: {fileID: 100006, guid: 8f89695518631824782102af0bed7d9e, type: 2}
   bloodPlayer: {fileID: 100024, guid: bb2b0c5291f99f14e8785cd45d85bc8e, type: 2}
