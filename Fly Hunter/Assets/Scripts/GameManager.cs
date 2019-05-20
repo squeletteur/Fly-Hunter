@@ -401,7 +401,7 @@ public class GameManager : MonoBehaviour
         wave++;
         interWave = false;
         ShowingWaveNumber(wave, waveNumber, WaveNumberText);
-        //SpawnTrophys(parentTrophys);
+        SpawnTrophys(parentTrophys);
     }
 
     public void ShowingWaveNumber(float waveNumber, GameObject WaveNumber, Text WaveNumberText)
@@ -415,7 +415,7 @@ public class GameManager : MonoBehaviour
         int i = Random.Range(0, trophysParent.transform.childCount);
         int n = Random.Range(0, trophysParent.transform.childCount);
 
-        for (int x = 0; x <= trophysParent.transform.childCount; x++)
+        for (int x = 0; x < trophysParent.transform.childCount; x++)
         {
             trophysParent.transform.GetChild(x).gameObject.SetActive(false);
         }
