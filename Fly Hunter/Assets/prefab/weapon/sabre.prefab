@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4452254549361422}
   - component: {fileID: 33350159870879914}
+  - component: {fileID: 114950297826515490}
   - component: {fileID: 23567125616570038}
   - component: {fileID: 136351018287926736}
   m_Layer: 0
@@ -302,6 +303,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 1119661039793162}
   OnSaber: 0
+--- !u!114 &114950297826515490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1119661039793162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091b776a9db5b3c42ba5a57dab55bd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136351018287926736
 CapsuleCollider:
   m_ObjectHideFlags: 1

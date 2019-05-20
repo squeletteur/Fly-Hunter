@@ -19,6 +19,7 @@ public class ControllerGrabObject : MonoBehaviour {
     private sabreLaser monSabre;
     private spray monSpray;
     private arbalete monArbalete;
+    private baguette mobilier;
     public SpawnerTongue tongue;
 
 
@@ -128,6 +129,16 @@ public class ControllerGrabObject : MonoBehaviour {
             //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
         }
 
+        if (objectSelect && objectInHand.CompareTag("mobilierCollid"))
+        {
+            objectInHand.transform.position = transform.position;
+            mobilier = objectInHand.GetComponent<baguette>();
+
+            objectInHand.tag = "mobilierCollidDamage";
+
+            objectInHand.transform.rotation = transform.rotation;
+            //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
+        }
 
 
 

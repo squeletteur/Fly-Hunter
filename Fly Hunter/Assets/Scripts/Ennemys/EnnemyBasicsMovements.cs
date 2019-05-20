@@ -125,8 +125,10 @@ public class EnnemyBasicsMovements : MonoBehaviour
             Invoke("stun", 0.5f);
         }
         
-        if (other.CompareTag("mobilierCollid"))
+        if (other.CompareTag("mobilierCollidDamage"))
         {
+            
+
             active = false;
             Instantiate(blood, transform.position, transform.rotation);
 

@@ -1278,8 +1278,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.23672934
+  m_Center: {x: 0, y: -0.027763402, z: 0}
 --- !u!137 &137961517592528124
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

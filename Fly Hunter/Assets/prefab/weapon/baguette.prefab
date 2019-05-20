@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4709853536983214}
   - component: {fileID: 33138611484422924}
   - component: {fileID: 23771216468337638}
-  - component: {fileID: 135921073440033144}
+  - component: {fileID: 65546133770969966}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: baguetteCollid
@@ -390,8 +390,8 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000002, y: 2, z: 1.0000004}
   m_Center: {x: 0.00000005960465, y: 0, z: -0.00000008940698}
---- !u!135 &135921073440033144
-SphereCollider:
+--- !u!65 &65546133770969966
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -400,5 +400,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.6860427, y: 0.7800589, z: 0.077826634}
+  m_Center: {x: 0.009499949, y: 0.036695972, z: -0.038614403}
