@@ -27,10 +27,11 @@ public class TrophysBonusPoint : MonoBehaviour {
 
             Debug.Log("fonctionne");
 
-            Destroy(collision.gameObject);
-            gameObject.transform.GetChild(0).gameObject.SetActive(true);
+           
+            //gameObject.transform.GetChild(0).gameObject.SetActive(true);
             GameManager.Singleton.score += pointBonus;
             lifePoint --;
-            }
+            Destroy(collision.gameObject);
+        }
     }
 }
