@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     public GameObject waveNumber;
     public Text WaveNumberText;
 
+    public int bonusHealth;
+
     private void Awake()
     {
         if (Singleton != null)
@@ -393,6 +395,7 @@ public class GameManager : MonoBehaviour
 
     public void StartWave()
     {
+        vie += bonusHealth;
         wave++;
         interWave = false;
         ShowingWaveNumber(wave, waveNumber, WaveNumberText);
@@ -400,7 +403,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowingWaveNumber(float waveNumber, GameObject WaveNumber, Text WaveNumberText)
     {
-        WaveNumberText.text = ("Wave" + waveNumber);
+        WaveNumberText.text = ("Wave " + waveNumber);
         WaveNumber.GetComponent<Animator>().SetTrigger("AnimationWaveNumber");
     }
 }
