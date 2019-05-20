@@ -13,6 +13,7 @@ public class arbalete : MonoBehaviour {
     public Transform projectileTransform;
 
     public bool fire;
+    public int ammo = 30;
 
     // Use this for initialization
     void Start()
@@ -25,9 +26,12 @@ public class arbalete : MonoBehaviour {
     {
         if(fire)
         {
+            
             LaunchProjectile();
             fire = false;
         }
+
+        
     }
 
 
@@ -35,13 +39,17 @@ public class arbalete : MonoBehaviour {
 
     public void LaunchProjectile()
     {
-        foreach (var firePoint in firePoints)
+        if(ammo >= 0)
         {
-            var projectileInstance = Instantiate(projectilePrefab, firePoint.position, projectileTransform.rotation);
+            foreach (var firePoint in firePoints)
+            {
+                var projectileInstance = Instantiate(projectilePrefab, firePoint.position, projectileTransform.rotation);
+                ammo--;
+                //,firePoint.rotation
 
-            //,firePoint.rotation
-
-            projectileInstance.AddForce(firePoint.forward * -launchForce);
+                projectileInstance.AddForce(firePoint.forward * -launchForce);
+            }
         }
+        
     }
 }
