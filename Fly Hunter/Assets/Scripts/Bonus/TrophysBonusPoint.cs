@@ -24,6 +24,9 @@ public class TrophysBonusPoint : MonoBehaviour {
     {
         if ((collision.gameObject.CompareTag("enemy")) && (collision.gameObject.GetComponent<EnnemyBasicsMovements>().isDeadAsking() == true))
             {
+
+            Debug.Log("fonctionne");
+
             Destroy(collision.gameObject);
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
             GameManager.Singleton.score += pointBonus;
