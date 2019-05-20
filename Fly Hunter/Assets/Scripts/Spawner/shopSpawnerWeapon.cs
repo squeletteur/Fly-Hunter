@@ -6,11 +6,12 @@ public class shopSpawnerWeapon : MonoBehaviour {
 
     public GameObject weapon;
     public int price;
+    public Transform spawnPoint;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+       
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,8 +23,10 @@ public class shopSpawnerWeapon : MonoBehaviour {
     {
         if(other.CompareTag("laserAchat") && GameManager.Singleton.score >= price)
         {
-            Instantiate(weapon, transform.position, transform.rotation);
+            Instantiate(weapon, spawnPoint.position, spawnPoint.rotation);
             GameManager.Singleton.score -= price;
         }
+
+        
     }
 }

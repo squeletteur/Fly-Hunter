@@ -55,7 +55,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            Invoke("destroy", 0.2f);
+            Invoke("destroy", 0f);
         }
 
         Vector3 relativePos = target.position - transform.position;
