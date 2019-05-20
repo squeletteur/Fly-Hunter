@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 33293625059551460}
   - component: {fileID: 114021659433190472}
   m_Layer: 0
-  m_Name: VolumetricLinePrefab
+  m_Name: LightSaberLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
