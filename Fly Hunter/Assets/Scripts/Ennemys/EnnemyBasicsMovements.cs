@@ -22,6 +22,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
     public GameObject Ragdoll;
     public GameObject blood;
+    public GameObject bloodPlayer;
 
 
 
@@ -54,7 +55,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            Invoke("destroy", 0f);
+            Invoke("destroy", 0.2f);
         }
 
         Vector3 relativePos = target.position - transform.position;
@@ -154,8 +155,8 @@ public class EnnemyBasicsMovements : MonoBehaviour
             GameManager.Singleton.vie -= damageDoPlayer;
 
             health = 0;
-            
 
+            Instantiate(bloodPlayer, transform.position, transform.rotation);
         }
 
 
