@@ -401,7 +401,7 @@ public class GameManager : MonoBehaviour
         wave++;
         interWave = false;
         ShowingWaveNumber(wave, waveNumber, WaveNumberText);
-        SpawnTrophys(parentTrophys);
+        //SpawnTrophys(parentTrophys);
     }
 
     public void ShowingWaveNumber(float waveNumber, GameObject WaveNumber, Text WaveNumberText)

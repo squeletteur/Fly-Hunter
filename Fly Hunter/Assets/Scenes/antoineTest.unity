@@ -5448,11 +5448,14 @@ MonoBehaviour:
   - {fileID: 1870187916670284, guid: 9418743df26495b4eb0fa013ce81f7ac, type: 2}
   - {fileID: 1134754627540066, guid: b30f81f9cc166d34185613b264ef3b12, type: 2}
   - {fileID: 1143199342688160, guid: 399c5f4ebaea0194a9e4e7d2bebec1f7, type: 2}
+  - {fileID: 1113110547927382, guid: 3ff3c33079a13da4a90e6250aec7a915, type: 2}
   positionsParent: {fileID: 18647129}
   waveDuration: 50
   waveDurationActual: 0
   waveNumber: {fileID: 666265262}
   WaveNumberText: {fileID: 1943981507}
+  parentTrophys: {fileID: 0}
+  bonusHealth: 0
 --- !u!1 &2068799943
 GameObject:
   m_ObjectHideFlags: 0

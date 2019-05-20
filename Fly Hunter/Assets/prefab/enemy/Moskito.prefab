@@ -1226,10 +1226,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fly: {fileID: 54001579039600394}
   active: 1
-  speed: 2
+  speed: 3
   health: 100
   type: moskito
-  damage: 50
+  damage: 100
   damageDoPlayer: 20
   ajoutScore: 20
   target: {fileID: 0}
