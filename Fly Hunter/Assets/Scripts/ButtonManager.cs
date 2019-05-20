@@ -17,12 +17,12 @@ public class ButtonManager : MonoBehaviour
 
 	}
 
-    private void PlayGame()
+    public void PlayGame()
     {
         GameObject.Find("UI Manager Menu").SetActive(false);
     }
 
-    private void QuitGame()
+    public void QuitGame()
     {
         Application.Quit();
     }
