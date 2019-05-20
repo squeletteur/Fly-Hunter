@@ -1265,6 +1265,7 @@ MonoBehaviour:
   ajoutScore: 20
   target: {fileID: 0}
   Ragdoll: {fileID: 1095746771838654, guid: b15a247da66c7864bbf68a0ce1f251b7, type: 2}
+  blood: {fileID: 100006, guid: 8f89695518631824782102af0bed7d9e, type: 2}
 --- !u!135 &135426739006551070
 SphereCollider:
   m_ObjectHideFlags: 1
