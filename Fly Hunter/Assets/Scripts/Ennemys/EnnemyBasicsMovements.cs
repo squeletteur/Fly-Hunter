@@ -24,6 +24,8 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public GameObject blood;
     public GameObject bloodPlayer;
 
+    private bool isDead = false;
+
 
 
 
@@ -72,7 +74,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         if(other.CompareTag("tapetteCollid"))
         {
             active = false;
-            
+            Instantiate(blood, transform.position, transform.rotation);
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -90,8 +92,8 @@ public class EnnemyBasicsMovements : MonoBehaviour
             active = false;
 
             //Destroy(other);
+            Instantiate(blood, transform.position, transform.rotation);
 
-            
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -107,7 +109,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         if (other.CompareTag("sabreCollid"))
         {
             active = false;
-            
+            Instantiate(blood, transform.position, transform.rotation);
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -122,7 +124,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         if (other.CompareTag("mobilierCollid"))
         {
             active = false;
-
+            Instantiate(blood, transform.position, transform.rotation);
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -137,7 +139,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         if (other.CompareTag("baguetteCollid"))
         {
             active = false;
-
+            Instantiate(blood, transform.position, transform.rotation);
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -151,7 +153,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
         if (other.CompareTag("player"))
         {
-
+            Instantiate(blood, transform.position, transform.rotation);
             GameManager.Singleton.vie -= damageDoPlayer;
 
             health = 0;
@@ -169,13 +171,14 @@ public class EnnemyBasicsMovements : MonoBehaviour
         fly.useGravity = false;
         fly.isKinematic = true;
 
-        Instantiate(blood, transform.position, transform.rotation);
+        
 
         GetComponent<Collider>().isTrigger = true;
     }
 
     public void destroy()
     {
+        isDead = true;
         Instantiate(blood, transform.position, transform.rotation);
         Instantiate(Ragdoll, transform.position, transform.rotation);
        
@@ -185,7 +188,10 @@ public class EnnemyBasicsMovements : MonoBehaviour
         GameManager.Singleton.score += ajoutScore;
     }
 
-   
+   public bool isDeadAsking()
+    {
+        return isDead;
+    }
 
    
 }

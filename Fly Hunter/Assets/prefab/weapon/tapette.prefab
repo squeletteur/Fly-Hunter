@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 65788220502043004}
   m_Layer: 0
   m_Name: tete
-  m_TagString: Untagged
+  m_TagString: tapetteCollid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,8 +98,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099938934934074}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26, y: 0.965, z: -8.012}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.32311058, y: -0.03399998, z: 1.0409999}
   m_LocalScale: {x: 0.09096162, y: 0.062357504, z: 0.09096162}
   m_Children:
   - {fileID: 4191175382122490}
