@@ -21,7 +21,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
     private perso cible;
 
     public GameObject Ragdoll;
-    
+    public GameObject blood;
 
 
 
@@ -168,12 +168,14 @@ public class EnnemyBasicsMovements : MonoBehaviour
         fly.useGravity = false;
         fly.isKinematic = true;
 
+        Instantiate(blood, transform.position, transform.rotation);
+
         GetComponent<Collider>().isTrigger = true;
     }
 
     public void destroy()
     {
-        
+        Instantiate(blood, transform.position, transform.rotation);
         Instantiate(Ragdoll, transform.position, transform.rotation);
        
 

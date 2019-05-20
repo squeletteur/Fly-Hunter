@@ -16,6 +16,7 @@ TagManager:
   - arbalete
   - baguetteCollid
   - mobilierCollid
+  - laserAchat
   layers:
   - Default
   - TransparentFX
