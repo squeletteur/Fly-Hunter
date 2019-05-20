@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     public GameObject waveNumber;
     public Text WaveNumberText;
 
+    public GameObject parentTrophys;
+
     public int bonusHealth;
 
     private void Awake()
@@ -399,11 +401,31 @@ public class GameManager : MonoBehaviour
         wave++;
         interWave = false;
         ShowingWaveNumber(wave, waveNumber, WaveNumberText);
+        SpawnTrophys(parentTrophys);
     }
 
     public void ShowingWaveNumber(float waveNumber, GameObject WaveNumber, Text WaveNumberText)
     {
         WaveNumberText.text = ("Wave " + waveNumber);
         WaveNumber.GetComponent<Animator>().SetTrigger("AnimationWaveNumber");
+    }
+
+    public void SpawnTrophys(GameObject trophysParent)
+    {
+        int i = Random.Range(0, trophysParent.transform.childCount);
+        int n = Random.Range(0, trophysParent.transform.childCount);
+
+        for (int x = 0; x <= trophysParent.transform.childCount; x++)
+        {
+            trophysParent.transform.GetChild(x).gameObject.SetActive(false);
+        }
+
+        while (i == n)
+        {
+            n = Random.Range(0, trophysParent.transform.childCount);
+        }
+
+        trophysParent.transform.GetChild(i).gameObject.SetActive(true);
+        trophysParent.transform.GetChild(n).gameObject.SetActive(true);
     }
 }
