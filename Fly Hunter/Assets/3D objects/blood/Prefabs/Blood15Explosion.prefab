@@ -221,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400024}
-  - component: {fileID: 114734945056870186}
+  - component: {fileID: 114882769339169458}
   m_Layer: 0
   m_Name: Blood15Explosion
   m_TagString: Untagged
@@ -1070,7 +1070,7 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100024}
   m_IsPrefabAsset: 1
---- !u!114 &114734945056870186
+--- !u!114 &114882769339169458
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5029dfad2dde49e4e9a7b3dadf27617e, type: 3}
+  m_Script: {fileID: 11500000, guid: 962cbfe8457249540af04ce0ebebc645, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxTime: 1
+  MaxTime: 2

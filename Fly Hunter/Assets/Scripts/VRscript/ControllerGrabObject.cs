@@ -210,7 +210,8 @@ public class ControllerGrabObject : MonoBehaviour {
 
     private void useObjectArbalete()
     {
-        monArbalete.LaunchProjectile();
+        //monArbalete.LaunchProjectile();
+        monArbalete.fire = true;
     }
 
     private void useObjectTongue()

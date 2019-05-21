@@ -37,7 +37,7 @@ public class arbalete : MonoBehaviour {
             
             LaunchProjectile();
             fire = false;
-
+            //InvokeRepeating("LaunchProjectile",0f, 0.5f);
             
         }
 

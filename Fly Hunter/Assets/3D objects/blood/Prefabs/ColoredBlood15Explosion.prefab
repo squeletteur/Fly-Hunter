@@ -62,6 +62,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400006}
+  - component: {fileID: 114657922492695766}
   m_Layer: 0
   m_Name: ColoredBlood15Explosion
   m_TagString: Untagged
@@ -274,7 +275,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.8473468, y: 0.9, z: -4.584182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400014}
@@ -1069,3 +1070,15 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100006}
   m_IsPrefabAsset: 1
+--- !u!114 &114657922492695766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962cbfe8457249540af04ce0ebebc645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxTime: 2
