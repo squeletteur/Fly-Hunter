@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
     public int sousvague = 1;
     bool interWave = true;
 
+    public bool activeWave = false;
+    public GameObject plat;
+    public Transform platSpawn;
+    public bool spawn = false;
+
     public List<GameObject> ennemys;
     private List<float> ennemysCDWave1;
     private List<float> ennemysCDWave2;
@@ -88,12 +93,16 @@ public class GameManager : MonoBehaviour
         //wave 1
         if ((wave == 1) && (interWave == false))
         {
+            
             waveDurationActual -= Time.deltaTime;
 
             if (waveDurationActual <= 0)
             {
+                
                 waveDurationActual = waveDuration;
+                spawn = true;
                 interWave = true;
+                
             }
 
             for (int i = 0; i < ennemys.Count; i++)
@@ -118,12 +127,16 @@ public class GameManager : MonoBehaviour
         //wave2
         if ((wave == 2) && (interWave == false))
         {
+            
             waveDurationActual -= Time.deltaTime;
 
             if (waveDurationActual <= 0)
             {
+                
                 waveDurationActual = waveDuration;
+                spawn = true;
                 interWave = true;
+                
             }
 
             for (int i = 0; i < ennemys.Count; i++)
@@ -153,7 +166,9 @@ public class GameManager : MonoBehaviour
             if (waveDurationActual <= 0)
             {
                 waveDurationActual = waveDuration;
+                spawn = true;
                 interWave = true;
+                
             }
 
             for (int i = 0; i < ennemys.Count; i++)
@@ -183,7 +198,9 @@ public class GameManager : MonoBehaviour
             if (waveDurationActual <= 0)
             {
                 waveDurationActual = waveDuration;
+                spawn = true;
                 interWave = true;
+                
             }
 
             for (int i = 0; i < ennemys.Count; i++)
@@ -213,7 +230,9 @@ public class GameManager : MonoBehaviour
             if (waveDurationActual <= 0)
             {
                 waveDurationActual = waveDuration;
+                spawn = true;
                 interWave = true;
+                
             }
 
             for (int i = 0; i < ennemys.Count; i++)
@@ -243,7 +262,9 @@ public class GameManager : MonoBehaviour
             if (waveDurationActual <= 0)
             {
                 waveDurationActual = waveDuration;
+                spawn = true;
                 interWave = true;
+                
             }
 
             for (int i = 0; i < ennemys.Count; i++)
@@ -273,7 +294,10 @@ public class GameManager : MonoBehaviour
             if (waveDurationActual <= 0)
             {
                 waveDurationActual = waveDuration;
+                spawn = true;
+
                 interWave = true;
+                
             }
 
             for (int i = 0; i < ennemys.Count; i++)
@@ -303,7 +327,9 @@ public class GameManager : MonoBehaviour
             if (waveDurationActual <= 0)
             {
                 waveDurationActual = waveDuration;
+                spawn = true;
                 interWave = true;
+               
             }
 
             for (int i = 0; i < ennemys.Count; i++)
@@ -333,7 +359,9 @@ public class GameManager : MonoBehaviour
             if (waveDurationActual <= 0)
             {
                 waveDurationActual = waveDuration;
+                spawn = true;
                 interWave = true;
+                
             }
 
             for (int i = 0; i < ennemys.Count; i++)
@@ -362,8 +390,11 @@ public class GameManager : MonoBehaviour
 
             if (waveDurationActual <= 0)
             {
+                
                 waveDurationActual = waveDuration;
+                spawn = true;
                 interWave = true;
+                
             }
 
             for (int i = 0; i < ennemys.Count; i++)
@@ -384,9 +415,18 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown("space"))
+        if(/*interWave == false && */spawn)
+        {
+            Instantiate(plat, platSpawn.position, platSpawn.rotation);
+            spawn = false;
+        }
+
+
+        if (/*Input.GetKeyDown("space") */activeWave)
         {
             StartWave();
+            activeWave = false;
+            
         }
     }
 

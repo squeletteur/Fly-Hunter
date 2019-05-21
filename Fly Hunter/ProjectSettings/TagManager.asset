@@ -26,6 +26,9 @@ TagManager:
   - Torso
   - Head
   - mobilierCollidDamage
+  - Lock
+  - triggerDispawn
+  - plat
   layers:
   - Default
   - TransparentFX
