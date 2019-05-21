@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 54140081953390118}
   - component: {fileID: 114790575328660334}
   - component: {fileID: 65609786115805566}
+  - component: {fileID: 114972558987616256}
   m_Layer: 0
   m_Name: sabre
   m_TagString: sabre
@@ -314,6 +315,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091b776a9db5b3c42ba5a57dab55bd02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114972558987616256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1002751896265380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c95b627b6201a94086ac02b9c1e9054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxTime: 5
+  active: 0
 --- !u!136 &136351018287926736
 CapsuleCollider:
   m_ObjectHideFlags: 1

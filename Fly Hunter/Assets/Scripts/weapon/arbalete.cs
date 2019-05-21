@@ -22,6 +22,10 @@ public class arbalete : MonoBehaviour {
     public bool vide = false;
     public float vitesse = 2;
 
+
+    float timer = 0;
+    public float MaxTime = 10f;
+
     // Use this for initialization
     void Start()
     {
@@ -47,6 +51,17 @@ public class arbalete : MonoBehaviour {
             anim.SetBool("outAmmo", true);
             Instantiate(chargeur, chargeurSpawn.position, chargeurSpawn.rotation);
             vide = true;
+        }
+
+        if(ammo <= 0)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= MaxTime)
+            {
+                Destroy(gameObject);
+                return;
+            }
         }
     }
 

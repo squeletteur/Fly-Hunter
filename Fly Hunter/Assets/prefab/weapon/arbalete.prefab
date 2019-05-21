@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 65669326579241362}
   - component: {fileID: 54384883851466768}
   - component: {fileID: 95432600271968924}
+  - component: {fileID: 114926477517561272}
   m_Layer: 0
   m_Name: arbalete
   m_TagString: arbalete
@@ -774,6 +775,20 @@ MonoBehaviour:
   cartoucheSpawn: {fileID: 4744741284081800}
   vide: 0
   vitesse: 3
+  MaxTime: 10
+--- !u!114 &114926477517561272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1264316293145342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c95b627b6201a94086ac02b9c1e9054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxTime: 5
+  active: 0
 --- !u!137 &137085647608080544
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 23394454726249914}
   - component: {fileID: 65213899055983588}
   - component: {fileID: 54943501428691290}
+  - component: {fileID: 114909712033428678}
   m_Layer: 0
   m_Name: baguette
   m_TagString: baguetteCollid
@@ -402,3 +403,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6860427, y: 0.7800589, z: 0.077826634}
   m_Center: {x: 0.009499949, y: 0.036695972, z: -0.038614403}
+--- !u!114 &114909712033428678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1359481824988304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c95b627b6201a94086ac02b9c1e9054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxTime: 5
+  active: 0
