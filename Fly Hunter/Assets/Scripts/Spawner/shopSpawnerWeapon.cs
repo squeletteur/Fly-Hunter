@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class shopSpawnerWeapon : MonoBehaviour {
 
     public GameObject weapon;
     public int price;
     public Transform spawnPoint;
+    public Text textsForPrice;
 
 	// Use this for initialization
-	void Start () {
-       
+	void Start ()
+    {
+         textsForPrice.text = price.ToString();
     }
 	
 	// Update is called once per frame
