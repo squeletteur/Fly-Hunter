@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameOverScript : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class GameOverScript : MonoBehaviour
         {
             TextGO.SetActive(true);
             ImageFonduNoir.fillAmount = timerFondu;
+            SceneManager.LoadScene("SceneJeu");
         }
     }
 }
