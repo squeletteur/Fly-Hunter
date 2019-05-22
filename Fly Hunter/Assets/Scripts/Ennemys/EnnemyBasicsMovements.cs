@@ -104,7 +104,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            health -= damage*2;
+            health -= damage/2;
 
             Invoke("stun", 0.5f);
         }
@@ -165,6 +165,21 @@ public class EnnemyBasicsMovements : MonoBehaviour
             health = 0;
 
             Instantiate(bloodPlayer, transform.position, transform.rotation);
+        }
+
+        if (other.CompareTag("sprayCollider"))
+        {
+            active = false;
+            Instantiate(blood, transform.position, transform.rotation);
+
+            fly.useGravity = true;
+            fly.isKinematic = false;
+
+            GetComponent<Collider>().isTrigger = false;
+
+            health -= damage;
+
+            Invoke("stun", 0.5f);
         }
 
 

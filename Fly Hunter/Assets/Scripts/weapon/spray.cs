@@ -6,8 +6,10 @@ public class spray : MonoBehaviour {
 
 
     public ParticleSystem sprayEffect;
-    public GameObject spraycube;
+    public GameObject sprayCollider;
     public bool OnSpray = false;
+
+    public float sprayAmmos;
 
 
     // Use this for initialization
@@ -21,39 +23,39 @@ public class spray : MonoBehaviour {
     {
         if (OnSpray == true)
         {
-            spraycube.SetActive(true);
-
-            if (!sprayEffect.isPlaying)
-            {
-                active();
-                sprayEffect.Play();
-            }
-            
+            sprayCollider.SetActive(true);
+            active();
+            sprayAmmos -= Time.deltaTime;
         }
 
         if (OnSpray == false)
         {
-            spraycube.SetActive(false);
+            sprayCollider.SetActive(false);
+            inactive();
+        }
 
-            if (sprayEffect.isPlaying)
-            {
-                inactive();
-                sprayEffect.Stop();
-            }
+        if (Input.GetKeyDown("space"))
+        {
+            OnSpray = !OnSpray;
+        }
+
+        if (sprayAmmos < 0)
+        {
+            Destroy(gameObject);
         }
     }
 
     public void active()
     {
-        //sprayEffect.SetActive(true);
-        sprayEffect.Play();
+        sprayEffect.gameObject.SetActive(true);
+        //sprayEffect.Play();
 
     }
 
     public void inactive()
     {
-        //sprayEffect.SetActive(false);
-        sprayEffect.Stop();
+        sprayEffect.gameObject.SetActive(false);
+        //sprayEffect.Stop();
     }
 
 
