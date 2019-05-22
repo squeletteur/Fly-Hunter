@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnnemyBasicsMovements : MonoBehaviour
 {
     
@@ -26,6 +27,8 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public GameObject bloodPlayer;
 
     private bool isDead = false;
+
+    public AudioSource degat;
 
 
 
@@ -86,7 +89,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
             GetComponent<Collider>().isTrigger = false;
 
             health -= damage;
-
+            degat.Play();
             Invoke("stun", 0.5f);
         }
 
@@ -105,7 +108,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
             GetComponent<Collider>().isTrigger = false;
 
             health -= damage/2;
-
+            degat.Play();
             Invoke("stun", 0.5f);
         }
 
@@ -121,7 +124,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
             GetComponent<Collider>().isTrigger = false;
 
             health -= damage + damage;
-
+            degat.Play();
             Invoke("stun", 0.5f);
         }
         
@@ -138,7 +141,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
             GetComponent<Collider>().isTrigger = false;
 
             health -= damage / 2;
-
+            degat.Play();
             Invoke("stun", 0.5f);
         }
 
@@ -153,7 +156,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
             GetComponent<Collider>().isTrigger = false;
 
             health -= damage;
-
+            degat.Play();
             Invoke("stun", 0.5f);
         }
 
@@ -163,7 +166,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
             GameManager.Singleton.vie -= damageDoPlayer;
 
             health = 0;
-
+            degat.Play();
             Instantiate(bloodPlayer, transform.position, transform.rotation);
         }
 
@@ -178,7 +181,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
             GetComponent<Collider>().isTrigger = false;
 
             health -= damage;
-
+            degat.Play();
             Invoke("stun", 0.5f);
         }
 
@@ -191,8 +194,9 @@ public class EnnemyBasicsMovements : MonoBehaviour
         active = true;
         fly.useGravity = false;
         fly.isKinematic = true;
-
         
+
+
 
         GetComponent<Collider>().isTrigger = true;
     }

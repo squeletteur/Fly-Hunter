@@ -11,6 +11,8 @@ public class shopSpawnerWeapon : MonoBehaviour {
     public Text textsForPrice;
     public GameObject UIfeedback;
 
+    public AudioSource shop;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -27,6 +29,7 @@ public class shopSpawnerWeapon : MonoBehaviour {
     {
         if(other.CompareTag("laserAchat") && GameManager.Singleton.score >= price)
         {
+            shop.Play();
             Instantiate(weapon, spawnPoint.position, spawnPoint.rotation);
             Instantiate(UIfeedback, transform.position, transform.rotation);
             GameManager.Singleton.score -= price;

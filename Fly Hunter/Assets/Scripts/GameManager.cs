@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Singleton;
+
+    public AudioSource debutWave;
+    public AudioSource endWave;
 
     public int score = 0;
     public int vie = 200;
@@ -430,7 +434,9 @@ public class GameManager : MonoBehaviour
 
         if (/*interWave == false && */spawn)
         {
+            endWave.Play();
             Instantiate(plat, platSpawn.position, platSpawn.rotation);
+     
             spawn = false;
         }
 
@@ -439,10 +445,23 @@ public class GameManager : MonoBehaviour
         {
             UIstart.SetActive(false);
             UIshop.SetActive(true);
+
+            debutWave.Play();
             StartWave();
             activeWave = false;
             
         }
+
+        if(vie <= 0)
+        {
+            interWave = true;
+            Invoke("end", 10f);
+        }
+    }
+
+    public void end()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void Spawn(int ennemyIndex)
