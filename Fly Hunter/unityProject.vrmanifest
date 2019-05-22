@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.flyhunter.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\Burea\\Documents\\Fly-Hunter\\Fly Hunter\\actions.json",
+      "action_manifest_path": "D:\\travail B1 game\\projet unity VR\\fly hunter\\Fly Hunter\\actions.json",
       "strings": {
         "en_us": {
           "name": "Fly Hunter [Testing]"

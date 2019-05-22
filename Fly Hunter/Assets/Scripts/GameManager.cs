@@ -44,9 +44,6 @@ public class GameManager : MonoBehaviour
 
     public int bonusHealth;
 
-    public Text scoreShowing;
-    public Text waveDurationShowing;
-
     private void Awake()
     {
         if (Singleton != null)
@@ -436,9 +433,6 @@ public class GameManager : MonoBehaviour
             activeWave = false;
             
         }
-
-        scoreShowing.text = score.ToString();
-        waveDurationShowing.text = waveDurationActual.ToString();
     }
 
     public void Spawn(int ennemyIndex)
