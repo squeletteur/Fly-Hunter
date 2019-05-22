@@ -29,6 +29,7 @@ TagManager:
   - Lock
   - triggerDispawn
   - plat
+  - sprayCollider
   layers:
   - Default
   - TransparentFX
