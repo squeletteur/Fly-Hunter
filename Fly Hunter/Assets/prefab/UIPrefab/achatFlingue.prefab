@@ -174,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1033294740193232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.31, y: 2.566, z: -3.081}
+  m_LocalPosition: {x: 0.31, y: 2.9, z: -2.16}
   m_LocalScale: {x: 0.6635, y: 0.41648, z: 0.11971976}
   m_Children:
   - {fileID: 4277460814762758}
@@ -251,7 +251,7 @@ MonoBehaviour:
   price: 5
   spawnPoint: {fileID: 4277460814762758}
   textsForPrice: {fileID: 114785120049915908}
-  UIfeedback: {fileID: 1213070621699172, guid: 49c33dba98166d543a5ec746d54fb677, type: 2}
+  UIfeedback: {fileID: 1291331945751304, guid: 661114b8137e0b64d8dcef0ab545028e, type: 2}
 --- !u!114 &114427596473574916
 MonoBehaviour:
   m_ObjectHideFlags: 1
