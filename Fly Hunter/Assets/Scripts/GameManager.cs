@@ -44,6 +44,9 @@ public class GameManager : MonoBehaviour
 
     public int bonusHealth;
 
+    public Text waveDurationActualShowing;
+    public Text scoreShowing;
+
     private void Awake()
     {
         if (Singleton != null)
@@ -416,6 +419,9 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
+
+            waveDurationActualShowing.text = waveDurationActual.ToString();
+            scoreShowing.text = score.ToString();
         }
 
         if(/*interWave == false && */spawn)
