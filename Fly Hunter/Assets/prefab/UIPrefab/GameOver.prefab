@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224497400626119948}
+  - component: {fileID: 114327540642039238}
   - component: {fileID: 223140270606510002}
   - component: {fileID: 114602710422896158}
   m_Layer: 0
@@ -86,7 +87,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4979333284157492}
-  - component: {fileID: 95417079984365980}
   m_Layer: 0
   m_Name: GameOver
   m_TagString: Untagged
@@ -114,31 +114,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1925174004636074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.636482, y: 1.84, z: -3.1564069}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -2.12, y: -1.45, z: 5.46}
+  m_LocalScale: {x: 1.9103, y: 1.9103, z: 1.9103}
   m_Children:
   - {fileID: 224497400626119948}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95417079984365980
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1925174004636074}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2c3e987a49814824189f18d855aa257e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114066423141721688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,6 +154,21 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Game Over
+--- !u!114 &114327540642039238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1427902443766856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15707aa98ac2d7f428f5041dcaf7bdd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IncrTimerFondu: 0.005
+  GM: {fileID: 0}
+  TextGO: {fileID: 0}
+  ImageFonduNoir: {fileID: 0}
 --- !u!114 &114361623897898126
 MonoBehaviour:
   m_ObjectHideFlags: 1

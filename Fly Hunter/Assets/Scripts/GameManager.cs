@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public Transform platSpawn;
     public bool spawn = false;
 
+    public GameObject UIstart;
+    public GameObject UIshop;
+
     public List<GameObject> ennemys;
     private List<float> ennemysCDWave1;
     private List<float> ennemysCDWave2;
@@ -424,6 +427,8 @@ public class GameManager : MonoBehaviour
 
         if (/*Input.GetKeyDown("space") */activeWave)
         {
+            UIstart.SetActive(false);
+            UIshop.SetActive(true);
             StartWave();
             activeWave = false;
             
