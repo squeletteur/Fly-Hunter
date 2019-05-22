@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class lampe : MonoBehaviour {
 
-    public int vie = GameManager.Singleton.vie;
+    public int vie;
     float vieVariation;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        vie = GameManager.Singleton.vie;
+    }
 	
 	// Update is called once per frame
 	void Update () {

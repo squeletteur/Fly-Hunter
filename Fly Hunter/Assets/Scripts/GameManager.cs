@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     public int vie = 200;
+    public int MaxVie;
     public int wave = 0;
     public int sousvague = 1;
     bool interWave = true;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject UIstart;
     public GameObject UIshop;
+    public Image lifeBar;
 
     public List<GameObject> ennemys;
     private List<float> ennemysCDWave1;
@@ -62,6 +64,7 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        MaxVie = vie;
         waveDurationActual = waveDuration;
 
         ennemysCDWave1 = new List<float>();
@@ -419,12 +422,13 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
-
-            waveDurationActualShowing.text = waveDurationActual.ToString();
-            scoreShowing.text = score.ToString();
         }
 
-        if(/*interWave == false && */spawn)
+        waveDurationActualShowing.text = waveDurationActual.ToString("0.0");
+        scoreShowing.text = score.ToString("0");
+        lifeBar.fillAmount = (vie*1f) / (MaxVie*1f);
+
+        if (/*interWave == false && */spawn)
         {
             Instantiate(plat, platSpawn.position, platSpawn.rotation);
             spawn = false;
