@@ -445,7 +445,7 @@ public class GameManager : MonoBehaviour
         vie += bonusHealth;
         wave++;
         interWave = false;
-        //ShowingWaveNumber(wave, waveNumber, WaveNumberText);
+        ShowingWaveNumber(wave, waveNumber, WaveNumberText);
         SpawnTrophys(parentTrophys);
     }
 
