@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 54611134914609202}
   m_Layer: 0
   m_Name: Spray 2
-  m_TagString: Untagged
+  m_TagString: spray
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +229,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1746439153018456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.756, y: 1.352, z: -4.693}
+  m_LocalPosition: {x: 8.871635, y: 6.198, z: -0.20275113}
   m_LocalScale: {x: 0.10747602, y: 0.19533767, z: 0.10747602}
   m_Children:
   - {fileID: 4350955718238566}
@@ -696,7 +696,7 @@ MonoBehaviour:
   sprayEffect: {fileID: 198521494776200488}
   sprayCollider: {fileID: 1007389777955282}
   OnSpray: 0
-  sprayAmmos: 20
+  sprayAmmos: 30
 --- !u!198 &198521494776200488
 ParticleSystem:
   m_ObjectHideFlags: 1

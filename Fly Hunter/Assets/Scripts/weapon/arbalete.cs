@@ -26,6 +26,9 @@ public class arbalete : MonoBehaviour {
     float timer = 0;
     public float MaxTime = 10f;
 
+    public AudioSource fireSound;
+    public AudioSource outSound;
+
     // Use this for initialization
     void Start()
     {
@@ -49,6 +52,7 @@ public class arbalete : MonoBehaviour {
         {
            
             anim.SetBool("outAmmo", true);
+            outSound.Play();
             Instantiate(chargeur, chargeurSpawn.position, chargeurSpawn.rotation);
             vide = true;
         }
@@ -75,6 +79,7 @@ public class arbalete : MonoBehaviour {
         if(ammo >= 0)
         {
             anim.SetTrigger("fire");
+            fireSound.Play();
             Instantiate(cartouche, cartoucheSpawn.position, cartoucheSpawn.rotation);
 
             foreach (var firePoint in firePoints)

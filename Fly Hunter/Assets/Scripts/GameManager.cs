@@ -441,7 +441,7 @@ public class GameManager : MonoBehaviour
         }
 
 
-        if (/*Input.GetKeyDown("space") */activeWave)
+        if (Input.GetKeyDown("space") || activeWave)
         {
             UIstart.SetActive(false);
             UIshop.SetActive(true);
