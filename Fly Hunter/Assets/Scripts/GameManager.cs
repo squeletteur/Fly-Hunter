@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public AudioSource debutWave;
     public AudioSource endWave;
 
+    public AudioSource music;
+
     public int score = 0;
     public int vie = 200;
     public int MaxVie;
@@ -68,6 +70,8 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        
+
         MaxVie = vie;
         waveDurationActual = waveDuration;
 
@@ -106,7 +110,8 @@ public class GameManager : MonoBehaviour
         //wave 1
         if ((wave == 1) && (interWave == false))
         {
-            
+            music.Play();
+
             waveDurationActual -= Time.deltaTime;
 
             if (waveDurationActual <= 0)
