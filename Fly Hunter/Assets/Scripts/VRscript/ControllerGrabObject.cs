@@ -116,6 +116,7 @@ public class ControllerGrabObject : MonoBehaviour {
             objectInHand.transform.position = transform.position;
             monSpray = objectInHand.GetComponent<spray>();
 
+            objectInHand.transform.rotation = transform.rotation;
             //objectInHand.transform.rotation = transform.rotation;
             //objectInHand.transform.rotation = Quaternion.Euler(45, transform.rotation.y, transform.rotation.z);
         }
