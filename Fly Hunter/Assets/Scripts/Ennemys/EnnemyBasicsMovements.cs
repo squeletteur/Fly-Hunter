@@ -12,7 +12,14 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public float speed;
     public int health = 100;
     public string type = "fly";
-    public int damage = 50;
+
+    public int damageTapette = 50;
+    public int damageSpray = 50;
+    public int damageLaser = 50;
+    public int damageMobilier = 50;
+    public int damagePistolet = 50;
+    public int damageBaguette = 50;
+
     public int damageDoPlayer = 50;
     public int ajoutScore;
 
@@ -88,7 +95,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            health -= damage;
+            health -= damageTapette;
             degat.Play();
             Invoke("stun", 0.5f);
         }
@@ -107,7 +114,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            health -= damage/2;
+            health -= damageTapette;
             degat.Play();
             Invoke("stun", 0.5f);
         }
@@ -123,7 +130,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            health -= damage + damage;
+            health -= damageLaser;
             degat.Play();
             Invoke("stun", 0.5f);
         }
@@ -140,7 +147,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            health -= damage / 2;
+            health -= damageMobilier;
             degat.Play();
             Invoke("stun", 0.5f);
         }
@@ -155,7 +162,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            health -= damage;
+            health -= damageBaguette;
             degat.Play();
             Invoke("stun", 0.5f);
         }
@@ -180,7 +187,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             GetComponent<Collider>().isTrigger = false;
 
-            health -= damage;
+            health -= damageSpray;
             degat.Play();
             Invoke("stun", 0.5f);
         }
@@ -195,19 +202,11 @@ public class EnnemyBasicsMovements : MonoBehaviour
         fly.useGravity = false;
         fly.isKinematic = true;
         
-
-
-
         GetComponent<Collider>().isTrigger = true;
     }
 
     public void destroy()
     {
-        
-        //Instantiate(blood, transform.position, transform.rotation);
-        //Instantiate(Ragdoll, transform.position, transform.rotation);
-       
-
         Destroy(gameObject);
         
         GameManager.Singleton.score += ajoutScore;
