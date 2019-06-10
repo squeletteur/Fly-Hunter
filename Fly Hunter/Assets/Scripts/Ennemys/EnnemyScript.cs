@@ -4,28 +4,9 @@ using UnityEngine;
 
 public class EnnemyScript : MonoBehaviour {
 
-    public float spawnCDWave1;
-    public float spawnCDWave2;
-    public float spawnCDWave3;
-    public float spawnCDWave4;
-    public float spawnCDWave5;
-    public float spawnCDWave6;
-    public float spawnCDWave7;
-    public float spawnCDWave8;
-    public float spawnCDWave9;
-    public float spawnCDWave10;
+    public List<float> ennemysCDWave;
 
-
-    public bool isInWave1;
-    public bool isInWave2;
-    public bool isInWave3;
-    public bool isInWave4;
-    public bool isInWave5;
-    public bool isInWave6;
-    public bool isInWave7;
-    public bool isInWave8;
-    public bool isInWave9;
-    public bool isInWave10;
+    public List<bool> isInWave;
 
 
     // Use this for initialization
@@ -34,106 +15,17 @@ public class EnnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
-
-    public float GetSpawnWave1CD()
-    {
-        return spawnCDWave1;
+        ennemysCDWave = new List<float>();
+        isInWave = new List<bool>();
     }
 
-    public float GetSpawnWave2CD()
+    public float GetSpawnWaveCD(int waveNumber)
     {
-        return spawnCDWave2;
+        return ennemysCDWave[waveNumber];
     }
 
-    public float GetSpawnWave3CD()
+    public bool IsHeInWave(int waveNumber)
     {
-        return spawnCDWave3;
-    }
-
-    public float GetSpawnWave4CD()
-    {
-        return spawnCDWave4;
-    }
-
-    public float GetSpawnWave5CD()
-    {
-        return spawnCDWave5;
-    }
-
-    public float GetSpawnWave6CD()
-    {
-        return spawnCDWave6;
-    }
-
-    public float GetSpawnWave7CD()
-    {
-        return spawnCDWave7;
-    }
-
-    public float GetSpawnWave8CD()
-    {
-        return spawnCDWave8;
-    }
-
-    public float GetSpawnWave9CD()
-    {
-        return spawnCDWave9;
-    }
-
-    public float GetSpawnWave10CD()
-    {
-        return spawnCDWave10;
-    }
-
-    public bool IsHeInWave1()
-    {
-        return isInWave1;
-    }
-
-    public bool IsHeInWave2()
-    {
-        return isInWave2;
-    }
-
-    public bool IsHeInWave3()
-    {
-        return isInWave3;
-    }
-
-    public bool IsHeInWave4()
-    {
-        return isInWave4;
-    }
-
-    public bool IsHeInWave5()
-    {
-        return isInWave5;
-    }
-
-    public bool IsHeInWave6()
-    {
-        return isInWave6;
-    }
-
-    public bool IsHeInWave7()
-    {
-        return isInWave7;
-    }
-
-    public bool IsHeInWave8()
-    {
-        return isInWave8;
-    }
-
-    public bool IsHeInWave9()
-    {
-        return isInWave9;
-    }
-
-    public bool IsHeInWave10()
-    {
-        return isInWave10;
+        return isInWave[waveNumber];
     }
 }
