@@ -1356,26 +1356,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717cafdf4eaff3a4d9557c7b11a56ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCDWave1: 2
-  spawnCDWave2: 12
-  spawnCDWave3: 0
-  spawnCDWave4: 0
-  spawnCDWave5: 0
-  spawnCDWave6: 0
-  spawnCDWave7: 10
-  spawnCDWave8: 0
-  spawnCDWave9: 0
-  spawnCDWave10: 9
-  isInWave1: 0
-  isInWave2: 0
-  isInWave3: 0
-  isInWave4: 0
-  isInWave5: 0
-  isInWave6: 0
-  isInWave7: 1
-  isInWave8: 0
-  isInWave9: 0
-  isInWave10: 1
+  ennemysCDWave:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 10
+  - 0
+  - 0
+  - 9
+  isInWave: 00000000000001000001
 --- !u!114 &114464392198905972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1392,7 +1384,12 @@ MonoBehaviour:
   speed: 1
   health: 400
   type: libelule
-  damage: 50
+  damageTapette: 50
+  damageSpray: 50
+  damageLaser: 50
+  damageMobilier: 50
+  damagePistolet: 50
+  damageBaguette: 50
   damageDoPlayer: 50
   ajoutScore: 100
   target: {fileID: 0}

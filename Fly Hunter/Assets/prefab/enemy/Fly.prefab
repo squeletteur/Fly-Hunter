@@ -1320,26 +1320,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717cafdf4eaff3a4d9557c7b11a56ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCDWave1: 4
-  spawnCDWave2: 5
-  spawnCDWave3: 4
-  spawnCDWave4: 4
-  spawnCDWave5: 4
-  spawnCDWave6: 5
-  spawnCDWave7: 4
-  spawnCDWave8: 0
-  spawnCDWave9: 4
-  spawnCDWave10: 3
-  isInWave1: 1
-  isInWave2: 1
-  isInWave3: 0
-  isInWave4: 1
-  isInWave5: 1
-  isInWave6: 1
-  isInWave7: 1
-  isInWave8: 0
-  isInWave9: 1
-  isInWave10: 1
+  ennemysCDWave:
+  - 4
+  - 5
+  - 0
+  - 4
+  - 4
+  - 5
+  - 4
+  - 0
+  - 4
+  - 3
+  isInWave: 01010001010101000101
 --- !u!114 &114577971806393176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1356,7 +1348,12 @@ MonoBehaviour:
   speed: 2
   health: 100
   type: fly
-  damage: 50
+  damageTapette: 50
+  damageSpray: 50
+  damageLaser: 50
+  damageMobilier: 50
+  damagePistolet: 50
+  damageBaguette: 50
   damageDoPlayer: 20
   ajoutScore: 20
   target: {fileID: 0}
