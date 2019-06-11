@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public int vie = 200;
     public int MaxVie;
     public int wave = -1;
+    public int waveMax = 9;
     bool interWave = true;
 
     public bool activeWave = false;
@@ -147,6 +148,16 @@ public class GameManager : MonoBehaviour
             interWave = true;
             Invoke("end", 10f);
         }
+
+        if (wave == waveMax)
+        {
+            Victory();
+        }
+    }
+
+    public void Victory()
+    {
+
     }
 
     public void end()
