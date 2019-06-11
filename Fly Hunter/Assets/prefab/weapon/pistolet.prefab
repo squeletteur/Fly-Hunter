@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 82790610345175130}
   - component: {fileID: 82433652381014998}
   m_Layer: 0
-  m_Name: arbalete
+  m_Name: pistolet
   m_TagString: arbalete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
