@@ -10,14 +10,14 @@ public class GameManager : MonoBehaviour
 
     public AudioSource debutWave;
     public AudioSource endWave;
+    public Animator microOndes;
 
     public AudioSource music;
 
     public int score = 0;
     public int vie = 200;
     public int MaxVie;
-    public int wave = 0;
-    public int sousvague = 1;
+    public int wave = -1;
     bool interWave = true;
 
     public bool activeWave = false;
@@ -30,16 +30,7 @@ public class GameManager : MonoBehaviour
     public Image lifeBar;
 
     public List<GameObject> ennemys;
-    private List<float> ennemysCDWave1;
-    private List<float> ennemysCDWave2;
-    private List<float> ennemysCDWave3;
-    private List<float> ennemysCDWave4;
-    private List<float> ennemysCDWave5;
-    private List<float> ennemysCDWave6;
-    private List<float> ennemysCDWave7;
-    private List<float> ennemysCDWave8;
-    private List<float> ennemysCDWave9;
-    private List<float> ennemysCDWave10;
+    private List<float> ennemysCDWave;
 
     public Transform positionsParent;
 
@@ -75,31 +66,11 @@ public class GameManager : MonoBehaviour
         MaxVie = vie;
         waveDurationActual = waveDuration;
 
-        ennemysCDWave1 = new List<float>();
-        ennemysCDWave2 = new List<float>();
-        ennemysCDWave3 = new List<float>();
-        ennemysCDWave4 = new List<float>();
-        ennemysCDWave5 = new List<float>();
-        ennemysCDWave6 = new List<float>();
-        ennemysCDWave7 = new List<float>();
-        ennemysCDWave8 = new List<float>();
-        ennemysCDWave9 = new List<float>();
-        ennemysCDWave10 = new List<float>();
+        ennemysCDWave = new List<float>();
 
         for (int i = 0; i < ennemys.Count; i++)
         {
-            Debug.Log(i);
-            ennemysCDWave1.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave1CD());
-            ennemysCDWave2.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave2CD());
-            ennemysCDWave3.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave3CD());
-            ennemysCDWave4.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave4CD());
-            ennemysCDWave5.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave5CD());
-            ennemysCDWave6.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave6CD());
-            ennemysCDWave7.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave7CD());
-            ennemysCDWave8.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave8CD());
-            ennemysCDWave9.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave9CD());
-            ennemysCDWave10.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave10CD());
-            Debug.Log(ennemysCDWave1[i]);
+            ennemysCDWave.Add(ennemys[i].GetComponent<EnnemyScript>().GetSpawnWaveCD(0));
         }
     }
 
@@ -107,8 +78,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        //wave 1
-        if ((wave == 1) && (interWave == false))
+        //wave
+        if (interWave == false)
         {
             music.Play();
 
@@ -125,309 +96,17 @@ public class GameManager : MonoBehaviour
 
             for (int i = 0; i < ennemys.Count; i++)
             {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave1();
+                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave(wave);
 
                 if (isIn == true)
                 {
-                    ennemysCDWave1[i] -= Time.deltaTime;
+                    ennemysCDWave[i] -= Time.deltaTime;
 
-                    if (ennemysCDWave1[i] <= 0)
+                    if (ennemysCDWave[i] <= 0)
                     {
                         Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave1CD();
-                        ennemysCDWave1[i] = CD;
-                    }
-                }
-            }
-        }
-
-
-        //wave2
-        if ((wave == 2) && (interWave == false))
-        {
-            
-            waveDurationActual -= Time.deltaTime;
-
-            if (waveDurationActual <= 0)
-            {
-                
-                waveDurationActual = waveDuration;
-                spawn = true;
-                interWave = true;
-                
-            }
-
-            for (int i = 0; i < ennemys.Count; i++)
-            {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave2();
-
-                if (isIn == true)
-                {
-                    ennemysCDWave2[i] -= Time.deltaTime;
-
-                    if (ennemysCDWave2[i] <= 0)
-                    {
-                        Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave2CD();
-                        ennemysCDWave2[i] = CD;
-                    }
-                }
-            }
-        }
-
-
-        //wave3
-        if ((wave == 3) && (interWave == false))
-        {
-            waveDurationActual -= Time.deltaTime;
-
-            if (waveDurationActual <= 0)
-            {
-                waveDurationActual = waveDuration;
-                spawn = true;
-                interWave = true;
-                
-            }
-
-            for (int i = 0; i < ennemys.Count; i++)
-            {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave3();
-
-                if (isIn == true)
-                {
-                    ennemysCDWave3[i] -= Time.deltaTime;
-
-                    if (ennemysCDWave3[i] <= 0)
-                    {
-                        Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave3CD();
-                        ennemysCDWave3[i] = CD;
-                    }
-                }
-            }
-        }
-
-
-        //wave4
-        if ((wave == 4) && (interWave == false))
-        {
-            waveDurationActual -= Time.deltaTime;
-
-            if (waveDurationActual <= 0)
-            {
-                waveDurationActual = waveDuration;
-                spawn = true;
-                interWave = true;
-                
-            }
-
-            for (int i = 0; i < ennemys.Count; i++)
-            {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave4();
-
-                if (isIn == true)
-                {
-                    ennemysCDWave4[i] -= Time.deltaTime;
-
-                    if (ennemysCDWave4[i] <= 0)
-                    {
-                        Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave4CD();
-                        ennemysCDWave4[i] = CD;
-                    }
-                }
-            }
-        }
-
-
-        //wave5
-        if ((wave == 5) && (interWave == false))
-        {
-            waveDurationActual -= Time.deltaTime;
-
-            if (waveDurationActual <= 0)
-            {
-                waveDurationActual = waveDuration;
-                spawn = true;
-                interWave = true;
-                
-            }
-
-            for (int i = 0; i < ennemys.Count; i++)
-            {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave5();
-
-                if (isIn == true)
-                {
-                    ennemysCDWave5[i] -= Time.deltaTime;
-
-                    if (ennemysCDWave5[i] <= 0)
-                    {
-                        Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave5CD();
-                        ennemysCDWave5[i] = CD;
-                    }
-                }
-            }
-        }
-
-
-        //wave6
-        if ((wave == 6) && (interWave == false))
-        {
-            waveDurationActual -= Time.deltaTime;
-
-            if (waveDurationActual <= 0)
-            {
-                waveDurationActual = waveDuration;
-                spawn = true;
-                interWave = true;
-                
-            }
-
-            for (int i = 0; i < ennemys.Count; i++)
-            {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave6();
-
-                if (isIn == true)
-                {
-                    ennemysCDWave6[i] -= Time.deltaTime;
-
-                    if (ennemysCDWave6[i] <= 0)
-                    {
-                        Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave6CD();
-                        ennemysCDWave6[i] = CD;
-                    }
-                }
-            }
-        }
-
-
-        //wave7
-        if ((wave == 7) && (interWave == false))
-        {
-            waveDurationActual -= Time.deltaTime;
-
-            if (waveDurationActual <= 0)
-            {
-                waveDurationActual = waveDuration;
-                spawn = true;
-
-                interWave = true;
-                
-            }
-
-            for (int i = 0; i < ennemys.Count; i++)
-            {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave7();
-
-                if (isIn == true)
-                {
-                    ennemysCDWave7[i] -= Time.deltaTime;
-
-                    if (ennemysCDWave7[i] <= 0)
-                    {
-                        Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave7CD();
-                        ennemysCDWave7[i] = CD;
-                    }
-                }
-            }
-        }
-
-
-        //wave8
-        if ((wave == 8) && (interWave == false))
-        {
-            waveDurationActual -= Time.deltaTime;
-
-            if (waveDurationActual <= 0)
-            {
-                waveDurationActual = waveDuration;
-                spawn = true;
-                interWave = true;
-               
-            }
-
-            for (int i = 0; i < ennemys.Count; i++)
-            {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave8();
-
-                if (isIn == true)
-                {
-                    ennemysCDWave8[i] -= Time.deltaTime;
-
-                    if (ennemysCDWave8[i] <= 0)
-                    {
-                        Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave8CD();
-                        ennemysCDWave8[i] = CD;
-                    }
-                }
-            }
-        }
-
-
-        //wave9
-        if ((wave == 9) && (interWave == false))
-        {
-            waveDurationActual -= Time.deltaTime;
-
-            if (waveDurationActual <= 0)
-            {
-                waveDurationActual = waveDuration;
-                spawn = true;
-                interWave = true;
-                
-            }
-
-            for (int i = 0; i < ennemys.Count; i++)
-            {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave9();
-
-                if (isIn == true)
-                {
-                    ennemysCDWave9[i] -= Time.deltaTime;
-
-                    if (ennemysCDWave9[i] <= 0)
-                    {
-                        Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave9CD();
-                        ennemysCDWave9[i] = CD;
-                    }
-                }
-            }
-        }
-
-
-        //wave10
-        if ((wave == 10) && (interWave == false))
-        {
-            waveDurationActual -= Time.deltaTime;
-
-            if (waveDurationActual <= 0)
-            {
-                
-                waveDurationActual = waveDuration;
-                spawn = true;
-                interWave = true;
-                
-            }
-
-            for (int i = 0; i < ennemys.Count; i++)
-            {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave10();
-
-                if (isIn == true)
-                {
-                    ennemysCDWave10[i] -= Time.deltaTime;
-
-                    if (ennemysCDWave10[i] <= 0)
-                    {
-                        Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWave10CD();
-                        ennemysCDWave10[i] = CD;
+                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWaveCD(wave);
+                        ennemysCDWave[i] = CD;
                     }
                 }
             }
@@ -441,8 +120,11 @@ public class GameManager : MonoBehaviour
         {
             endWave.Play();
             Instantiate(plat, platSpawn.position, platSpawn.rotation);
-     
+
+            
+
             spawn = false;
+            //microOndes.SetBool("open", false);
         }
 
 
@@ -450,11 +132,12 @@ public class GameManager : MonoBehaviour
         {
             UIstart.SetActive(false);
             UIshop.SetActive(true);
+            activeWave = false;
 
             debutWave.Play();
             StartWave();
-            activeWave = false;
             
+            //microOndes.SetBool("open", true);
         }
 
         if(vie <= 0)
@@ -476,11 +159,20 @@ public class GameManager : MonoBehaviour
 
     public void StartWave()
     {
+        Debug.Log(wave);
         vie += bonusHealth;
-        wave++;
+        wave ++;
+
+        for (int i = 0; i < ennemys.Count; i++)
+        {
+            float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWaveCD(wave);
+            ennemysCDWave[i] = CD;
+        }
+
         interWave = false;
         //ShowingWaveNumber(wave, waveNumber, WaveNumberText);
         SpawnTrophys(parentTrophys);
+        Debug.Log(wave);
     }
 
     public void ShowingWaveNumber(float waveNumber, GameObject WaveNumber, Text WaveNumberText)
