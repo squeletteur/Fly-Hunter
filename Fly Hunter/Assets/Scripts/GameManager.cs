@@ -132,11 +132,11 @@ public class GameManager : MonoBehaviour
         {
             UIstart.SetActive(false);
             UIshop.SetActive(true);
-            
+            activeWave = false;
 
             debutWave.Play();
             StartWave();
-            activeWave = false;
+            
             //microOndes.SetBool("open", true);
         }
 
