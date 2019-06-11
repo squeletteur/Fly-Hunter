@@ -118,18 +118,20 @@ public class GameManager : MonoBehaviour
 
         if (/*interWave == false && */spawn)
         {
+            microOndes.SetBool("open", false);
             endWave.Play();
             Instantiate(plat, platSpawn.position, platSpawn.rotation);
 
             
 
             spawn = false;
-            //microOndes.SetBool("open", false);
+            
         }
 
 
         if (Input.GetKeyDown("space") || activeWave)
         {
+            microOndes.SetBool("open", true);
             UIstart.SetActive(false);
             UIshop.SetActive(true);
             activeWave = false;
@@ -137,7 +139,7 @@ public class GameManager : MonoBehaviour
             debutWave.Play();
             StartWave();
             
-            //microOndes.SetBool("open", true);
+           
         }
 
         if(vie <= 0)
