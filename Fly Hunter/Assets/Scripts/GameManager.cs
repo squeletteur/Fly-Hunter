@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource debutWave;
     public AudioSource endWave;
+    public Animator microOndes;
 
     public AudioSource music;
 
@@ -119,8 +120,11 @@ public class GameManager : MonoBehaviour
         {
             endWave.Play();
             Instantiate(plat, platSpawn.position, platSpawn.rotation);
-     
+
+            
+
             spawn = false;
+            //microOndes.SetBool("open", false);
         }
 
 
@@ -128,11 +132,12 @@ public class GameManager : MonoBehaviour
         {
             UIstart.SetActive(false);
             UIshop.SetActive(true);
+            
 
             debutWave.Play();
             StartWave();
             activeWave = false;
-            
+            //microOndes.SetBool("open", true);
         }
 
         if(vie <= 0)
