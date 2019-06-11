@@ -10,9 +10,11 @@ GameObject:
   - component: {fileID: 499294}
   - component: {fileID: 3313326}
   - component: {fileID: 2391438}
-  - component: {fileID: 54095817492494128}
   - component: {fileID: 65254252960043368}
   - component: {fileID: 114882483089543554}
+  - component: {fileID: 54695978515645066}
+  - component: {fileID: 65371358036344324}
+  - component: {fileID: 114702457387224698}
   m_Layer: 0
   m_Name: mH_Knife
   m_TagString: mobilierCollid
@@ -90,7 +92,7 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 153832}
   m_IsPrefabAsset: 1
---- !u!54 &54095817492494128
+--- !u!54 &54695978515645066
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,6 +119,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0053493716, y: 0.028170899, z: 0.37553668}
   m_Center: {x: 0.00000047683716, y: -0.0000009536743, z: -0.00000022351742}
+--- !u!65 &65371358036344324
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153832}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0053493716, y: 0.028170899, z: 0.37553668}
+  m_Center: {x: 0.00000047683716, y: -0.0000009536743, z: -0.00000022351742}
+--- !u!114 &114702457387224698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74fbcaf8484c2645a40dba1c81d3215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grav: 0
+  rigidbody: {fileID: 0}
 --- !u!114 &114882483089543554
 MonoBehaviour:
   m_ObjectHideFlags: 1
