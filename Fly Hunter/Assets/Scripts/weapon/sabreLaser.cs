@@ -37,19 +37,5 @@ public class sabreLaser : MonoBehaviour {
     {
         laser.SetActive(false);
     }
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("GameController"))
-        {
-            degaine();
-        }
-
-
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        rengaine();
-    }
-    */
+    
 }

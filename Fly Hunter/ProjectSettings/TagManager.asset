@@ -30,6 +30,8 @@ TagManager:
   - triggerDispawn
   - plat
   - sprayCollider
+  - tapetteThorCollid
+  - triggerThor
   layers:
   - Default
   - TransparentFX
