@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public AudioSource music;
 
     public int score = 0;
-    public int vie = 200;
+    public int vie;
     public int MaxVie;
     public int wave = -1;
     public int waveMax = 9;
@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
 
     public Text waveDurationActualShowing;
     public Text scoreShowing;
+
+    public ParticleSystem gameOverUI;
 
     private void Awake()
     {
@@ -146,7 +148,7 @@ public class GameManager : MonoBehaviour
         if(vie <= 0)
         {
             interWave = true;
-            Invoke("end", 10f);
+            end();
         }
 
         if (wave == waveMax)
@@ -161,6 +163,12 @@ public class GameManager : MonoBehaviour
     }
 
     public void end()
+    {
+        Invoke("restartScene", 10f);
+        gameOverUI.gameObject.SetActive(true);
+    }
+
+    public void restartScene()
     {
         SceneManager.LoadScene(0);
     }
