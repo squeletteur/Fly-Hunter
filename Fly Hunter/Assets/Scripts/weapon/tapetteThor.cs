@@ -50,7 +50,7 @@ public class tapetteThor : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("triggerThor"))
+        if(other.CompareTag("triggerThor") && charge == false)
         {
             charge = true;
         }
