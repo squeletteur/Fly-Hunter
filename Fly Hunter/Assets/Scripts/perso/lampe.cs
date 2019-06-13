@@ -22,8 +22,6 @@ public class lampe : MonoBehaviour {
 
         vieVariation = (((vie*1f) + 0.01f) / (vieMax * 1f) * colorIndicator);
 
-        Debug.Log(vieVariation);
-
         GetComponent<Light>().color = Color.Lerp(Color.red, Color.white, vieVariation);
     }
 }
