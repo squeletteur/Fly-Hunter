@@ -40,6 +40,11 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
     public AudioSource degat;
 
+    private int effetChoose;
+    public GameObject effet1;
+    public GameObject effet2;
+    public GameObject effet3;
+
 
 
 
@@ -91,7 +96,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         if(other.CompareTag("tapetteCollid"))
         {
             active = false;
-            Instantiate(blood, transform.position, transform.rotation);
+            
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -100,13 +105,14 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             health -= damageTapette;
             degat.Play();
+            Invoke("effet", 0f);
             Invoke("stun", 0.5f);
         }
 
         if (other.CompareTag("tapetteThorCollid"))
         {
             active = false;
-            Instantiate(blood, transform.position, transform.rotation);
+            
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -115,6 +121,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             health -= damageThor;
             degat.Play();
+            Invoke("effet", 0f);
             Invoke("stun", 0.5f);
         }
 
@@ -133,6 +140,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             health -= damageThor;
             degat.Play();
+            Invoke("effet", 0f);
             Invoke("stun", 0.5f);
         }
 
@@ -142,7 +150,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
             active = false;
 
             //Destroy(other);
-            Instantiate(blood, transform.position, transform.rotation);
+            
 
 
             fly.useGravity = true;
@@ -152,6 +160,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             health -= damageTapette;
             degat.Play();
+            Invoke("effet", 0f);
             Invoke("stun", 0.5f);
         }
 
@@ -159,7 +168,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         if (other.CompareTag("sabreCollid"))
         {
             active = false;
-            Instantiate(blood, transform.position, transform.rotation);
+            
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -168,6 +177,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             health -= damageLaser;
             degat.Play();
+            Invoke("effet", 0f);
             Invoke("stun", 0.5f);
         }
         
@@ -176,7 +186,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
             
 
             active = false;
-            Instantiate(blood, transform.position, transform.rotation);
+            
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -185,13 +195,14 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             health -= damageMobilier;
             degat.Play();
+            Invoke("effet", 0f);
             Invoke("stun", 0.5f);
         }
 
         if (other.CompareTag("baguetteCollid"))
         {
             active = false;
-            Instantiate(blood, transform.position, transform.rotation);
+           
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -200,12 +211,13 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             health -= damageBaguette;
             degat.Play();
+            Invoke("effet", 0f);
             Invoke("stun", 0.5f);
         }
 
         if (other.CompareTag("player"))
         {
-            Instantiate(blood, transform.position, transform.rotation);
+           
             GameManager.Singleton.vie -= damageDoPlayer;
 
             health = 0;
@@ -216,7 +228,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
         if (other.CompareTag("sprayCollider"))
         {
             active = false;
-            Instantiate(blood, transform.position, transform.rotation);
+            
 
             fly.useGravity = true;
             fly.isKinematic = false;
@@ -225,11 +237,32 @@ public class EnnemyBasicsMovements : MonoBehaviour
 
             health -= damageSpray;
             degat.Play();
+            Invoke("effet", 0f);
             Invoke("stun", 0.5f);
         }
 
 
 
+    }
+
+    public void effet()
+    {
+        Instantiate(blood, transform.position, transform.rotation);
+
+        effetChoose = Random.Range(0, 2);
+
+        if (effetChoose == 0)
+        {
+            Instantiate(effet1, transform.position, transform.rotation);
+        }
+        if (effetChoose == 1)
+        {
+            Instantiate(effet2, transform.position, transform.rotation);
+        }
+        if (effetChoose == 2)
+        {
+            Instantiate(effet3, transform.position, transform.rotation);
+        }
     }
 
     public void stun()
@@ -239,6 +272,9 @@ public class EnnemyBasicsMovements : MonoBehaviour
         fly.isKinematic = true;
         
         GetComponent<Collider>().isTrigger = true;
+
+
+        
     }
 
     public void destroy()

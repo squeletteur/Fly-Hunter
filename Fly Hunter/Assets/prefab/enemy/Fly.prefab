@@ -1366,6 +1366,9 @@ MonoBehaviour:
   blood: {fileID: 100006, guid: 8f89695518631824782102af0bed7d9e, type: 2}
   bloodPlayer: {fileID: 100024, guid: bb2b0c5291f99f14e8785cd45d85bc8e, type: 2}
   degat: {fileID: 82160961941841476}
+  effet1: {fileID: 1098272977408590, guid: 58c7dbfbc21dcea42880e930a6d4190c, type: 2}
+  effet2: {fileID: 1804212574237478, guid: d36d5d0f197965241a6faf1a2e60130f, type: 2}
+  effet3: {fileID: 1406997535832764, guid: aeb7556fb6edca44183dba39c8ffe328, type: 2}
 --- !u!135 &135426739006551070
 SphereCollider:
   m_ObjectHideFlags: 1

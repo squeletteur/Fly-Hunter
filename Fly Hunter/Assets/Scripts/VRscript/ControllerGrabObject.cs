@@ -22,7 +22,7 @@ public class ControllerGrabObject : MonoBehaviour {
     private baguette mobilier;
     public SpawnerTongue tongue;
 
-
+    private Animator main;
 
 
 
@@ -30,7 +30,7 @@ public class ControllerGrabObject : MonoBehaviour {
 
     void Start()
     {
-        
+        main = GetComponentInChildren<Animator>();
 
     }
 
@@ -44,7 +44,7 @@ public class ControllerGrabObject : MonoBehaviour {
             {
                 GrabObject();
                 objectSelect = true;
-
+                main.SetTrigger("GrabSmall");
                 
             }
         }
@@ -56,6 +56,7 @@ public class ControllerGrabObject : MonoBehaviour {
             {
                 ReleaseObject();
                 objectSelect = false;
+                main.SetTrigger("Idle");
             }
         }
 
