@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScript : MonoBehaviour
 {
-    private float timerFondu;
     public float IncrTimerFondu = 0.005f;
 
     public GameManager GM;
@@ -25,7 +24,6 @@ public class GameOverScript : MonoBehaviour
 	void Update ()
     {
         GameOver();
-        timerFondu += IncrTimerFondu * Time.deltaTime;
 	}
 
     private void GameOver()
@@ -33,8 +31,6 @@ public class GameOverScript : MonoBehaviour
         if(GM.vie <= 0)
         {
             TextGO.SetActive(true);
-            ImageFonduNoir.fillAmount = timerFondu;
-            SceneManager.LoadScene("SceneJeu");
         }
     }
 }

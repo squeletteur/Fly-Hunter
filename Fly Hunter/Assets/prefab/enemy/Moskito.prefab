@@ -1331,7 +1331,7 @@ MonoBehaviour:
   damageMobilier: 50
   damagePistolet: 50
   damageBaguette: 50
-  damageDoPlayer: 20
+  damageDoPlayer: 30
   ajoutScore: 20
   target: {fileID: 0}
   anim: {fileID: 111498052310267958}
