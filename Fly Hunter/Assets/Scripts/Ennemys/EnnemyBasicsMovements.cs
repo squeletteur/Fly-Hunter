@@ -19,6 +19,9 @@ public class EnnemyBasicsMovements : MonoBehaviour
     public int damageMobilier = 50;
     public int damagePistolet = 50;
     public int damageBaguette = 50;
+    public int damageThor = 50;
+    public GameObject thunder;
+    public GameObject bonusThorDamage;
 
     public int damageDoPlayer = 50;
     public int ajoutScore;
@@ -96,6 +99,39 @@ public class EnnemyBasicsMovements : MonoBehaviour
             GetComponent<Collider>().isTrigger = false;
 
             health -= damageTapette;
+            degat.Play();
+            Invoke("stun", 0.5f);
+        }
+
+        if (other.CompareTag("tapetteThorCollid"))
+        {
+            active = false;
+            Instantiate(blood, transform.position, transform.rotation);
+
+            fly.useGravity = true;
+            fly.isKinematic = false;
+
+            GetComponent<Collider>().isTrigger = false;
+
+            health -= damageThor;
+            degat.Play();
+            Invoke("stun", 0.5f);
+        }
+
+        if (other.CompareTag("tapetteThorCollid2"))
+        {
+            active = false;
+            Instantiate(thunder, transform.position, transform.rotation);
+            thunder.transform.parent = gameObject.transform;
+
+            Instantiate(bonusThorDamage);
+
+            fly.useGravity = true;
+            fly.isKinematic = false;
+
+            GetComponent<Collider>().isTrigger = false;
+
+            health -= damageThor;
             degat.Play();
             Invoke("stun", 0.5f);
         }

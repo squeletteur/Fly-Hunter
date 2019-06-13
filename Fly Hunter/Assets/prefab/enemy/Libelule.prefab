@@ -1386,10 +1386,14 @@ MonoBehaviour:
   type: libelule
   damageTapette: 50
   damageSpray: 50
-  damageLaser: 50
-  damageMobilier: 50
-  damagePistolet: 50
+  damageLaser: 100
+  damageMobilier: 25
+  damagePistolet: 100
   damageBaguette: 50
+  damageThor: 150
+  thunder: {fileID: 1075559846594794, guid: b426494d04a935f4a90ed9a48992d6fa, type: 2}
+  bonusThorDamage: {fileID: 1324938063037348, guid: d220994ad25aa72429c6083abd32a726,
+    type: 2}
   damageDoPlayer: 50
   ajoutScore: 100
   target: {fileID: 0}
