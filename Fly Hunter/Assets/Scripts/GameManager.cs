@@ -37,8 +37,8 @@ public class GameManager : MonoBehaviour
 
     public float waveDuration;
     public float waveDurationActual;
-    public GameObject waveNumber;
     public Text WaveNumberText;
+    public Animator WaveNumberAnimator;
 
     public GameObject parentTrophys;
 
@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
     public GameObject victoryUI;
 
     public Animator UIVictory;
+
+    private bool firstTimeWaveNumberShowing = true;
 
     private void Awake()
     {
@@ -202,15 +204,29 @@ public class GameManager : MonoBehaviour
         }
 
         interWave = false;
-        //ShowingWaveNumber(wave, waveNumber, WaveNumberText);
+        ShowingWaveNumber(wave, WaveNumberText);
+        Invoke("StopShowingWaveNumber",4f);
+
         SpawnTrophys(parentTrophys);
         Debug.Log(wave);
     }
 
-    public void ShowingWaveNumber(float waveNumber, GameObject WaveNumber, Text WaveNumberText)
+    public void ShowingWaveNumber(float waveNumber, Text WaveNumberText)
     {
-        WaveNumberText.text = ("Wave " + waveNumber);
-        WaveNumber.GetComponent<Animator>().SetTrigger("AnimationWaveNumber");
+        WaveNumberAnimator.gameObject.SetActive(true);
+        WaveNumberText.text = ("Vague " + wave);
+
+        if (firstTimeWaveNumberShowing == false)
+        {
+            WaveNumberAnimator.SetTrigger("AnimationRestart");
+        }
+
+        firstTimeWaveNumberShowing = false;
+    }
+
+    public void StopShowingWaveNumber()
+    {
+        WaveNumberAnimator.SetTrigger("AnimationEnd");
     }
 
     public void SpawnTrophys(GameObject trophysParent)
