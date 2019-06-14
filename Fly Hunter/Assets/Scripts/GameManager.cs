@@ -48,6 +48,9 @@ public class GameManager : MonoBehaviour
     public Text scoreShowing;
 
     public ParticleSystem gameOverUI;
+    public GameObject victoryUI;
+
+    public Animator UIVictory;
 
     private void Awake()
     {
@@ -159,7 +162,15 @@ public class GameManager : MonoBehaviour
 
     public void Victory()
     {
+        victoryUI.SetActive(true);
+        Invoke("VictoryAnimationEnd", 8f);
+        Invoke("restartScene",10f);
+    }
 
+    public void VictoryAnimationEnd()
+    {
+        Debug.Log("Raphaël");
+        UIVictory.SetTrigger("AnimationEnd");
     }
 
     public void end()
