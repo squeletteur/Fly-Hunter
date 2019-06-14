@@ -1354,6 +1354,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   textsForPrice: {fileID: 0}
   UIfeedback: {fileID: 0}
+  shop: {fileID: 0}
 --- !u!65 &1857106945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1467,14 +1468,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b268bf7710677d24a9dabfb01057f610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debutWave: {fileID: 0}
+  endWave: {fileID: 0}
+  microOndes: {fileID: 0}
+  music: {fileID: 0}
   score: 0
   vie: 200
+  MaxVie: 0
   wave: 0
-  sousvague: 1
+  waveMax: 9
   activeWave: 0
   plat: {fileID: 0}
   platSpawn: {fileID: 0}
   spawn: 0
+  UIstart: {fileID: 0}
+  UIshop: {fileID: 0}
+  lifeBar: {fileID: 0}
   ennemys:
   - {fileID: 1870187916670284, guid: 9418743df26495b4eb0fa013ce81f7ac, type: 2}
   - {fileID: 1134754627540066, guid: b30f81f9cc166d34185613b264ef3b12, type: 2}
@@ -1487,6 +1496,9 @@ MonoBehaviour:
   WaveNumberText: {fileID: 1943981507}
   parentTrophys: {fileID: 1651772070}
   bonusHealth: 50
+  waveDurationActualShowing: {fileID: 0}
+  scoreShowing: {fileID: 0}
+  gameOverUI: {fileID: 0}
 --- !u!1 &2068799943
 GameObject:
   m_ObjectHideFlags: 0
