@@ -521,8 +521,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1264316293145342}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: -0.49999994, w: 0.5000002}
-  m_LocalPosition: {x: 10.645, y: 5.656, z: -2.6024752}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.223, y: 0.1768, z: 0.989}
   m_LocalScale: {x: 0.057220057, y: 0.048840057, z: 0.10313012}
   m_Children:
   - {fileID: 4423184623966604}
@@ -967,6 +967,7 @@ MonoBehaviour:
   cartoucheSpawn: {fileID: 4744741284081800}
   vide: 0
   vitesse: 3
+  effet: {fileID: 1938076065853180, guid: 28045391d24cf5446af9c020169648cd, type: 2}
   MaxTime: 10
   fireSound: {fileID: 82790610345175130}
   outSound: {fileID: 82433652381014998}

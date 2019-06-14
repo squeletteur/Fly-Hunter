@@ -22,6 +22,7 @@ public class arbalete : MonoBehaviour {
     public bool vide = false;
     public float vitesse = 2;
 
+    public GameObject effet;
 
     float timer = 0;
     public float MaxTime = 10f;
@@ -72,8 +73,6 @@ public class arbalete : MonoBehaviour {
     
 
 
-
-
     public void LaunchProjectile()
     {
         if(ammo >= 0)
@@ -85,6 +84,8 @@ public class arbalete : MonoBehaviour {
             foreach (var firePoint in firePoints)
             {
                 var projectileInstance = Instantiate(projectilePrefab, firePoint.position, projectileTransform.rotation);
+
+                Instantiate(effet, firePoint.position, projectileTransform.rotation);
                 ammo--;
                 
                 //,firePoint.rotation
