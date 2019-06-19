@@ -10,12 +10,16 @@ GameObject:
   - component: {fileID: 493386}
   - component: {fileID: 3381198}
   - component: {fileID: 2383494}
+  - component: {fileID: 54605751037818892}
+  - component: {fileID: 65846596954011454}
+  - component: {fileID: 65242806280217210}
+  - component: {fileID: 114859586130368590}
   m_Layer: 0
   m_Name: mH_ChineseTakeoutBox02
-  m_TagString: Untagged
+  m_TagString: mobilierCollid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967294
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &493386
 Transform:
@@ -23,9 +27,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.18939473, z: -0, w: 0.98190105}
+  m_LocalPosition: {x: -1.351, y: -0.049767017, z: -0.484}
+  m_LocalScale: {x: 0.59977996, y: 0.59978, z: 0.59977996}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -45,7 +49,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: af25337088dcfb848917f2f6ddb695c6, type: 2}
+  - {fileID: 2100000, guid: dbaf285675d6ec24e8e13ef88a90ae5a, type: 2}
   - {fileID: 2100000, guid: 94a5ca366f195a247b38fbe96bc11d81, type: 2}
   - {fileID: 2100000, guid: 756470589dfcdb14fad931412e3da957, type: 2}
   m_StaticBatchInfo:
@@ -97,3 +101,55 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 112856}
   m_IsPrefabAsset: 1
+--- !u!54 &54605751037818892
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112856}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65242806280217210
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21970052, y: 0.21543781, z: 0.38397574}
+  m_Center: {x: 0.054286297, y: 0.10812586, z: -0.016885133}
+--- !u!65 &65846596954011454
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34795138, y: 0.026254047, z: 0.24584171}
+  m_Center: {x: -0.25194332, y: 0.013533974, z: -0.08595203}
+--- !u!114 &114859586130368590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74fbcaf8484c2645a40dba1c81d3215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grav: 0
+  rigidbody: {fileID: 0}
