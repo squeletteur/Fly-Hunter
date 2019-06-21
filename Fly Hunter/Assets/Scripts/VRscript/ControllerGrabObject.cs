@@ -40,11 +40,14 @@ public class ControllerGrabObject : MonoBehaviour {
         // 1
         if (grabAction.GetLastStateDown(handType))
         {
+
+            main.SetTrigger("GrabSmall");
+
             if (collidingObject)
             {
                 GrabObject();
                 objectSelect = true;
-                main.SetTrigger("GrabSmall");
+                
                 
             }
         }
@@ -52,11 +55,13 @@ public class ControllerGrabObject : MonoBehaviour {
         // 2
         if (grabAction.GetLastStateUp(handType))
         {
+            main.SetTrigger("Idle");
+
             if (objectInHand)
             {
                 ReleaseObject();
                 objectSelect = false;
-                main.SetTrigger("Idle");
+                
             }
         }
 
