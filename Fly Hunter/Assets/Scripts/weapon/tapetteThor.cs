@@ -55,4 +55,11 @@ public class tapetteThor : MonoBehaviour {
             charge = true;
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("triggerThor") && charge == false)
+        {
+            charge = true;
+        }
+    }
 }
