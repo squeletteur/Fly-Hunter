@@ -30,7 +30,7 @@ public class EnnemyBasicsMovements : MonoBehaviour
     private GameObject targetObject;
     public Transform target;
     private perso cible;
-    public Animation anim;
+    public Animator anim;
 
     public GameObject Ragdoll;
     public GameObject blood;
