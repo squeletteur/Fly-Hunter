@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 65090875684924750}
   m_Layer: 0
   m_Name: eclair
-  m_TagString: tapetteThorCollid
+  m_TagString: tapetteThorCollid2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -601,9 +601,9 @@ GameObject:
   - component: {fileID: 114626636016868110}
   - component: {fileID: 33850435864529444}
   - component: {fileID: 23990460084591496}
-  - component: {fileID: 136165664575188522}
   - component: {fileID: 54012763401275876}
   - component: {fileID: 114052244072192446}
+  - component: {fileID: 65861499452069168}
   m_Layer: 0
   m_Name: tapetteTesla
   m_TagString: Untagged
@@ -2352,8 +2352,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.5876148, y: 0.66907537, z: 0.38327184}
+  m_Center: {x: 0.021800296, y: -0.009180789, z: 0.004037718}
+--- !u!65 &65861499452069168
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1937190985467058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 3.7091916, z: 1.0000002}
+  m_Center: {x: 0.000000053645426, y: -0.5571548, z: -0.00000010729085}
 --- !u!65 &65868691875488980
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2560,7 +2572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eclair: {fileID: 1121283626989528}
   charge: 0
-  cooldown: 5
+  cooldown: 10
 --- !u!114 &114631499054595970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2626,19 +2638,6 @@ MonoBehaviour:
   m_DefaultIntensity: 0.6447
   disableOnAnimEnd: 0
   m_LoopAnimation: 1
---- !u!136 &136165664575188522
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1937190985467058}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.6562086
-  m_Height: 3.270655
-  m_Direction: 1
-  m_Center: {x: 0.000000053645426, y: -0.2262004, z: -0.04393689}
 --- !u!136 &136435052797679896
 CapsuleCollider:
   m_ObjectHideFlags: 1

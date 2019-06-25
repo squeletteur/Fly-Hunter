@@ -1450,7 +1450,7 @@ MonoBehaviour:
   fly: {fileID: 54749524528011672}
   active: 1
   speed: 2
-  health: 100
+  health: 50
   type: fly
   damageTapette: 50
   damageSpray: 50

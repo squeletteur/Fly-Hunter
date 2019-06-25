@@ -1274,7 +1274,7 @@ MonoBehaviour:
   fly: {fileID: 54841180888352312}
   active: 1
   speed: 2
-  health: 200
+  health: 150
   type: bee
   damageTapette: 50
   damageSpray: 50
