@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
         //wave
         if (interWave == false)
         {
-            music.Play();
+            
 
             waveDurationActual -= Time.deltaTime;
 
@@ -146,8 +146,8 @@ public class GameManager : MonoBehaviour
 
             debutWave.Play();
             StartWave();
-            
-           
+            music.Play();
+
         }
 
         if(vie <= 0)

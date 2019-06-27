@@ -220,7 +220,8 @@ public class EnnemyBasicsMovements : MonoBehaviour
            
             GameManager.Singleton.vie -= damageDoPlayer;
 
-            health = 0;
+            microDestroy();
+            
             degat.Play();
             Instantiate(bloodPlayer, transform.position, transform.rotation);
         }
@@ -282,6 +283,11 @@ public class EnnemyBasicsMovements : MonoBehaviour
         Destroy(gameObject);
         
         GameManager.Singleton.score += ajoutScore;
+    }
+
+    public void microDestroy()
+    {
+        Destroy(gameObject);
     }
 
    public bool isDeadAsking()
