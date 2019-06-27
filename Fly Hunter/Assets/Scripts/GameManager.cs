@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
                     if (ennemysCDWave[i] <= 0)
                     {
                         Spawn(i);
-                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWaveCD(wave);
+                        float CD = ennemys[i].GetComponent<EnnemyScript>().GetSpawnWaveCD(wave - 1);
                         ennemysCDWave[i] = CD;
                     }
                 }
