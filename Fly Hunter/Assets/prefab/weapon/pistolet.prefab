@@ -967,7 +967,7 @@ MonoBehaviour:
   cartoucheSpawn: {fileID: 4744741284081800}
   vide: 0
   vitesse: 3
-  effet: {fileID: 1938076065853180, guid: 28045391d24cf5446af9c020169648cd, type: 2}
+  effet: {fileID: 1098272977408590, guid: 58c7dbfbc21dcea42880e930a6d4190c, type: 2}
   MaxTime: 10
   fireSound: {fileID: 82790610345175130}
   outSound: {fileID: 82433652381014998}

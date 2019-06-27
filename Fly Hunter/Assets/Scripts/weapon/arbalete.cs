@@ -85,7 +85,7 @@ public class arbalete : MonoBehaviour {
             {
                 var projectileInstance = Instantiate(projectilePrefab, firePoint.position, projectileTransform.rotation);
 
-                Instantiate(effet, firePoint.position, projectileTransform.rotation);
+                //Instantiate(effet, firePoint.position, projectileTransform.rotation);
                 ammo--;
                 
                 //,firePoint.rotation

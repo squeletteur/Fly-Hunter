@@ -75,9 +75,10 @@ GameObject:
   - component: {fileID: 4725743294055136}
   - component: {fileID: 33212091027290348}
   - component: {fileID: 23971896358283012}
+  - component: {fileID: 65663408586930482}
   m_Layer: 0
   m_Name: pCylinder3
-  m_TagString: Untagged
+  m_TagString: sabreCollid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,9 +93,10 @@ GameObject:
   - component: {fileID: 4877954631394940}
   - component: {fileID: 33586861776571950}
   - component: {fileID: 23472504895954172}
+  - component: {fileID: 65546483368800890}
   m_Layer: 0
   m_Name: pCylinder2
-  m_TagString: Untagged
+  m_TagString: sabreCollid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,9 +128,10 @@ GameObject:
   - component: {fileID: 4835991833805222}
   - component: {fileID: 33139949594387580}
   - component: {fileID: 23951941752573892}
+  - component: {fileID: 65027314179764720}
   m_Layer: 0
   m_Name: pCube2
-  m_TagString: Untagged
+  m_TagString: sabreCollid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +173,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1002751896265380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.67, y: 0.1, z: 1.163}
+  m_LocalPosition: {x: 8.935524, y: 6.128489, z: -0.057914883}
   m_LocalScale: {x: 0.047653526, y: 0.12697046, z: 0.047653526}
   m_Children:
   - {fileID: 4558818695990838}
@@ -555,6 +558,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65027314179764720
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1577467716849098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12953252, y: 0.003937516, z: 0.12954009}
+  m_Center: {x: 0, y: -0.0000000037252903, z: 0}
+--- !u!65 &65546483368800890
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1417417647862202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.021088375, y: 0.020000061, z: 0.021088377}
+  m_Center: {x: -0.0000000023283053, y: -0.0000019120052, z: -0.0000000051222755}
 --- !u!65 &65609786115805566
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -567,6 +594,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
   m_Center: {x: 0.0000019669533, y: 0.00000047683716, z: 0.0000018179417}
+--- !u!65 &65663408586930482
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329797608203774}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02000004, y: 0.020000005, z: 0.020000037}
+  m_Center: {x: -0.000000010710206, y: 9.31323e-10, z: -0.0000019073486}
 --- !u!114 &114790575328660334
 MonoBehaviour:
   m_ObjectHideFlags: 1

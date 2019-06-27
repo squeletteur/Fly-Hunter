@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FlyHunter_House.unity
-    guid: e081e106a6732444a8f18c988fca77c8
+    path: Assets/Scenes/FlyHunter_House_cartoon_resize.unity
+    guid: db5ca94aceb37bd4597fa3bb3f2bc510
   m_configObjects: {}

@@ -41,7 +41,7 @@ public class ControllerGrabObject : MonoBehaviour {
         if (grabAction.GetLastStateDown(handType))
         {
 
-            main.SetTrigger("GrabSmall");
+            main.SetTrigger("GrabStickUp");
 
             if (collidingObject)
             {
