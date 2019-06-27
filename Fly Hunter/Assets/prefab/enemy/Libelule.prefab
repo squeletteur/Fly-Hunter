@@ -1737,7 +1737,7 @@ MonoBehaviour:
   anim: {fileID: 95850914443781936}
   Ragdoll: {fileID: 1311586067010140, guid: d8154e8f1103c3048be2c523aefbdaa8, type: 2}
   blood: {fileID: 100006, guid: 8f89695518631824782102af0bed7d9e, type: 2}
-  bloodPlayer: {fileID: 100024, guid: bb2b0c5291f99f14e8785cd45d85bc8e, type: 2}
+  bloodPlayer: {fileID: 100006, guid: 8f89695518631824782102af0bed7d9e, type: 2}
   degat: {fileID: 82024889206455046}
   effet1: {fileID: 1098272977408590, guid: 58c7dbfbc21dcea42880e930a6d4190c, type: 2}
   effet2: {fileID: 1804212574237478, guid: d36d5d0f197965241a6faf1a2e60130f, type: 2}
