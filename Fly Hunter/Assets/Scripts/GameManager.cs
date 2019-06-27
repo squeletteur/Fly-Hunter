@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
 
             for (int i = 0; i < ennemys.Count; i++)
             {
-                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave(wave);
+                bool isIn = ennemys[i].GetComponent<EnnemyScript>().IsHeInWave(wave - 1);
 
                 if (isIn == true)
                 {
