@@ -1,26 +1,40 @@
 fileFormatVersion: 2
-guid: 4716b9130d39cdb4994d0f2b9fca17c0
+guid: f8e8b7b5b1d60a54986ef1cb5cebff1c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: segment
+    100002: Electrical_Outlet_1
+    100004: Electrical_Outlet_2
+    100006: Electrical_Switch_1
+    100008: Electrical_Switch_2
     400000: //RootNode
-    400002: segment
-    2300000: segment
-    3300000: segment
-    4300000: segment
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: segmentMat
-    second: {fileID: 2100000, guid: 6d3836111b2a1a241b21f103091ff9eb, type: 2}
+    400002: Electrical_Outlet_1
+    400004: Electrical_Outlet_2
+    400006: Electrical_Switch_1
+    400008: Electrical_Switch_2
+    2100000: Electrical_Outlet_1Mat
+    2100002: Electrical_Outlet_2Mat
+    2100004: Electrical_Switch_1Mat
+    2100006: Electrical_Switch_2Mat
+    2300000: Electrical_Outlet_1
+    2300002: Electrical_Outlet_2
+    2300004: Electrical_Switch_1
+    2300006: Electrical_Switch_2
+    3300000: Electrical_Outlet_1
+    3300002: Electrical_Outlet_2
+    3300004: Electrical_Switch_1
+    3300006: Electrical_Switch_2
+    4300000: Electrical_Outlet_1
+    4300002: Electrical_Outlet_2
+    4300004: Electrical_Switch_1
+    4300006: Electrical_Switch_2
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -49,10 +63,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importVisibility: 0
+    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -60,7 +74,7 @@ ModelImporter:
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    indexFormat: 1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -72,7 +86,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 0
+    normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
